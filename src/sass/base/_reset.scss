@@ -1,0 +1,26 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.link {
+    text-decoration: none;
+    // transition: color 250ms $transitionTimeFunction;
+}
+
+.list {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+    padding-left: 0;
+    align-items: center;
+    list-style: none;
+}
