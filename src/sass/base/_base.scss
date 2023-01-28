@@ -53,3 +53,18 @@ img {
     clip-path: inset(50%);
     margin: -1px;
 }
+
+// to hide section title 
+.hide {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    overflow: hidden;
+    word-wrap: normal !important;
+}
