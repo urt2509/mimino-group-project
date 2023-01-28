@@ -1,0 +1,123 @@
+ <div class="flex-box">
+            <a href="#" data-popup-btn="presentation" class="popup-link">Попап 1</a>
+            <button type="button" data-popup-btn="presentation" class="popup-link">Попап 1</button>
+
+            <a href="#" data-popup-btn="test-modal" class="popup-link">Попап 2</a>
+            <button type="button" data-popup-btn="test-modal" class="popup-link">Попап 2</button>
+        </div>
+ <div data-popup-target="presentation" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <button type="button" class="popup__close close-popup">X</button>
+            <div class="popup__title"><strong>Модалка 1</strong></div>
+            <div class="popup__text">
+                ipsum dolor sit amet consectetur adipisicing elit.
+                Aut enim vero veritatis velit assumenda soluta sed ad, omnis alias placeat debitis voluptas ea ipsam
+                dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+            </div>
+        </div>
+    </div>
+</div>
+<div data-popup-target="test-modal" class="popup">
+    <div class="popup__body">
+        <div class="popup__content">
+            <button type="button" class="popup__close close-popup">X</button>
+            <div class="popup__title"><strong>Модалка 2</strong></div>
+            <div class="popup__text">
+                ipsum dolor sit amet consectetur adipisicing elit.
+                Aut enim vero veritatis velit assumenda soluta sed ad, omnis alias placeat debitis voluptas ea ipsam
+                dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim vero veritatis velit assumenda soluta
+                sed ad, omnis alias placeat debitis voluptas ea ipsam dolorum error dolorem, a blanditiis! Quidem!
+            </div>
+        </div>
+    </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- <div class="backdrop backdrop--is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close" data-modal-close>
+          <svg width="11" height="11">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title">Залиште свої дані, ми вам передзвонимо</h2>
+        <form name="user-form" class="form">
+          <label for="user-name" class="form__lable">Ім'я</label>
+          <div class="form__thumb">
+            <input type="text" name="user-name" id="user-name" class="form__area" />
+            <svg width="18px" height="18px" class="form__icon">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </div>
+          <label for="user-tel" class="form__lable">Телефон</label>
+          <div class="form__thumb">
+            <input type="tel" name="user-tel" id="user-tel" class="form__area" />
+            <svg width="18px" height="18px" class="form__icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <label for="user-mail" class="form__lable">Пошта</label>
+          <div class="form__thumb">
+            <input type="email" name="user-mail" id="user-mail" class="form__area" />
+            <svg width="18px" height="18px" class="form__icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </div>
+          <label for="user-coment" class="form__lable">Коментар</label>
+          <textarea
+            name="user-coment"
+            id="user-coment"
+            class="form__coment"
+            placeholder="Введіть текст"
+          ></textarea>
+          <div class="checkbox">
+            <input
+              type="checkbox"
+              id="terms-checkbox"
+              name="terms-checkbox"
+              class="checkbox__terms"
+            />
+            <svg width="16" height="15" class="checkbox__icon">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <label for="terms-checkbox" class="checkbox__text"
+              >Погоджуюся з розсилкою та приймаю
+              <a href="" class="checkbox__license"> Умови договору</a>
+            </label>
+          </div>
+          <button type="submit" class="button form__button">Відправити</button>
+        </form>
+      </div>
+    </div> -->
