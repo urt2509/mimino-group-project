@@ -4,9 +4,15 @@
 }
 
 .hotel__box-text {
-  margin-right: 129px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 
-  text-align: end;
+  margin-right: 144px;
+
+  @media screen and (min-width: $tabletScreen) {
+    margin-right: 278px;
+  }
 }
 
 .hotel__title {
@@ -19,16 +25,24 @@
   letter-spacing: 0.3em;
 
   color: #ffffff;
+
+  @media screen and (min-width: $tabletScreen) {
+    font-size: 64px;
+  }
 }
 
 .hotel__subtitle {
   margin-bottom: 20px;
 
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.22;
   letter-spacing: 0.02em;
 
   color: #ffffff;
+
+  @media screen and (min-width: $tabletScreen) {
+    font-size: 24px;
+  }
 }
 
 .hotel__text {
@@ -36,12 +50,42 @@
 
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.25;
+  line-height: 1.22;
   letter-spacing: 0.02em;
 
-  text-align: start;
-
   color: #bababa;
+
+  @media screen and (min-width: $tabletScreen) {
+    max-width: 549px;
+
+    font-size: 16px;
+  }
+}
+
+.hotel-slider__box-icon {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: end;
+  gap: 32px;
+
+  margin-right: 43px;
+  margin-bottom: 32px;
+}
+
+.hotel-slider__link {
+  color: #ffffff;
+  transition: color 250ms $transitionTimeFunction;
+  &:hover,
+  &:focus {
+    color: #f3c653;
+  }
+}
+
+.hotel-slider__icon {
+  height: 32px;
+  width: 32px;
+
+  fill: currentColor;
 }
 
 .hotel__box-buttons {
@@ -55,7 +99,6 @@
 
 .hotel__button {
   @include button_MinWidth_Bg(236px, rgba(0, 0, 0, 0.4));
-  min-height: 48px;
   text-align: center;
   letter-spacing: 0.02em;
 }
@@ -64,8 +107,7 @@
   @include button_MinWidth_Bg(236px, rgba(0, 0, 0, 0.4));
   display: inline-block;
 
-  padding: 14px 0;
-  min-height: 48px;
+  padding: 12px 0;
   margin-bottom: 40px;
 
   letter-spacing: 0.02em;

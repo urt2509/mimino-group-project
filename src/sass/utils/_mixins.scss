@@ -3,6 +3,7 @@
   $buttons-background: $buttons-background
 ) {
   min-width: $buttons-min-width;
+  height: 48px;
 
   font-family: inherit;
   font-size: 16px;
@@ -13,9 +14,7 @@
   background: $buttons-background;
 
   border-radius: $buttons-border-radius;
-  border: none;
   border: 2px solid #ffffff;
-  box-sizing: border-box;
 
   transform: scale(1);
   transition: background 250ms $transitionTimeFunction,
@@ -45,9 +44,7 @@
   background: #000000;
 
   border-radius: $buttons-border-radius;
-  border: none;
   border: 1px solid #f3c653;
-  box-sizing: border-box;
 
   transform: scale(1);
   transition: color 250ms $transitionTimeFunction,
