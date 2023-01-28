@@ -34,10 +34,14 @@ img {
 
     @media screen and (min-width: $tabletScreen) {
         max-width: $tabletScreen;
+        padding-left: 47px;
+        padding-right: 47px;
     }
 
     @media screen and (min-width: $desktopScreen) {
         max-width: $desktopScreen;
+        padding-left: 85px;
+        padding-right: 85px;
     }
 }
 
