@@ -1,0 +1,21 @@
+.amenities {
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	@media screen and (min-width: $tabletScreen) {
+		padding-top: 50px;
+		padding-bottom: 40px;
+}
+	@media screen and (min-width: $desktopScreen) {
+			padding-top: 48px;
+			padding-bottom: 48px;
+	}
+	&__title {
+		margin-bottom: 16px;
+		font-family: 'Times New Roman';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 37px;
+	}
+}
