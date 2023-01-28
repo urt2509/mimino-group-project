@@ -1,10 +1,13 @@
 .restaurant {
   padding-top: 24px;
+  padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.65);
 }
 
 .rextaurant__box-text {
-  margin-left: 140px;
+  @media screen and (min-width: $tabletScreen) {
+    margin-left: 278px;
+  }
 }
 
 .restaurant__title {
@@ -13,11 +16,16 @@
   font-weight: 700;
   font-size: 40px;
   line-height: 1.08;
-  /* identical to box height */
 
   letter-spacing: 0.3em;
 
   color: #ffffff;
+
+  @media screen and (min-width: $tabletScreen) {
+    margin-bottom: 16px;
+
+    font-size: 64px;
+  }
 }
 
 .restaurant__subtitle {
@@ -28,6 +36,12 @@
   letter-spacing: 0.02em;
 
   color: #ffffff;
+
+  @media screen and (min-width: $tabletScreen) {
+    margin-bottom: 8px;
+
+    font-size: 24px;
+  }
 }
 
 .restaurant__text {
@@ -39,6 +53,27 @@
   letter-spacing: 0.02em;
 
   color: #bababa;
+
+  @media screen and (min-width: $tabletScreen) {
+    max-width: 610px;
+
+    font-size: 16px;
+  }
+}
+
+.restaurant-slider__box {
+  @media screen and (min-width: $tabletScreen) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+
+.restaurant-slider__block {
+  @media screen and (min-width: $tabletScreen) {
+    margin-left: 29px;
+  }
 }
 
 .restaurant-slider__box-icon {
@@ -46,16 +81,22 @@
   flex-wrap: nowrap;
   gap: 32px;
 
-  margin-left: 40px;
-  margin-bottom: 32px;
+  @media screen and (max-width: ($tabletScreen - 1px)) {
+    margin-left: 40px;
+    margin-bottom: 32px;
+  }
 }
 
 .restaurant-slider__link-arrow {
   color: #ffffff;
-  transition: color 250ms $transitionTimeFunction;
+
+  transform: scale(1);
+  transition: color 250ms $transitionTimeFunction,
+    transform 250ms $transitionTimeFunction;
   &:hover,
   &:focus {
     color: #f3c653;
+    transform: scale(1.05);
   }
 }
 
@@ -73,6 +114,12 @@
   justify-content: center;
 
   text-align: center;
+
+  @media screen and (min-width: $tabletScreen) {
+    flex-direction: column;
+    margin-left: 47px;
+    margin-bottom: 60px;
+  }
 }
 
 .restaurant__button {
@@ -86,7 +133,6 @@
   display: inline-block;
 
   padding: 12px 0;
-  margin-bottom: 40px;
 
   letter-spacing: 0.02em;
   text-decoration: none;
