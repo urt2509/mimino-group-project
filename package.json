@@ -19,7 +19,9 @@
   },
   "dependencies": {
     "modern-normalize": "^1.1.0",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "imask": "^6.4.3",
+    "nice-select2": "^2.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
