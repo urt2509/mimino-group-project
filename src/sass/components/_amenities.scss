@@ -1,0 +1,85 @@
+.amenities {
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background: #FFFDEE;
+
+	@media screen and (min-width: $tabletScreen) {
+		padding-top: 50px;
+		padding-bottom: 40px;
+}
+	@media screen and (min-width: $desktopScreen) {
+			padding-top: 48px;
+			padding-bottom: 48px;
+	}
+	&__title {
+		margin-bottom: 16px;
+
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 1.16;
+		color: #000000;
+		text-transform: uppercase;
+	}
+	&__text {
+		margin-bottom: 32px;
+		min-width: 384px;
+
+		font-family: 'Montserrat';
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 1.25;
+		letter-spacing: 0.02em;
+		color: #7A7A7A;
+
+		@media screen and (min-width: $tabletScreen) {
+			width: 757px;
+
+		}
+	}
+	&__list {
+		// flex-wrap: wrap;
+		// display: flex;
+	}
+	&__item {
+		margin-bottom: 32px;
+		min-width: 384px;
+
+		@media screen and (min-width: $tabletScreen) {
+			min-width: 400px;
+			display: flex;
+			gap: 80px;
+		}
+	}
+}
+
+.amenities-room__title {
+	display: block;
+	margin-bottom: 16px;
+	font-family: 'Times New Roman';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.17;
+	color: #000000;
+	text-transform: uppercase;
+}
+.amenities-room__text {
+	margin-top: 0;
+	margin-bottom: 16px;
+
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.02em;
+	
+	color: #7A7A7A;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@media screen and (min-width: $tabletScreen) {
+		margin-bottom: 0;
+	}
+}
