@@ -6,9 +6,11 @@
     font-size: 40px;
     line-height: calc(43 / 40);
     letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: $color;
 }
-// * logo-tilte for tablet and desktop -the same *
+
+// * logo-title for tablet and desktop - the same *
 @mixin logo-title-tablet-desktop ($color) {
     font-family: 'Film P3';
     font-style: normal;
@@ -16,6 +18,7 @@
     font-size: 64px;
     line-height: calc(69 / 64);
     letter-spacing: 0.3em;
+    text-transform: uppercase;
     color: $color;
 }
 
