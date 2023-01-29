@@ -1,4 +1,5 @@
 @import '~/node_modules/modern-normalize/modern-normalize.css';
+@import '~/node_modules/swiper/swiper-bundle.min.css';
 .example {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
@@ -32,8 +33,7 @@ html {
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  /* bold */
+  font-weight: 700; /* bold */
 }
 
 *,
@@ -45,7 +45,7 @@ body {
 img {
   display: block;
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .container {
@@ -264,6 +264,157 @@ p {
   }
 }
 
+.section-about__content--reverse {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.section-about__img-container--reverse {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.section-about__img--reverse {
+  left: 0;
+}
+
+.swiper--reverse {
+  left: 0;
+  margin: 0 !important;
+}
+
+.swiper-btns--reverse {
+  justify-content: flex-start !important;
+}
+
+.section__brand-title {
+  font-family: "Film P3";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.078125;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #494848;
+  margin-bottom: 24px;
+}
+
+.section-about {
+  background-color: #FFFDEE;
+  padding: 120px 0 225px;
+}
+.section-about__container {
+  display: flex;
+  margin-bottom: 162px;
+}
+.section-about__content {
+  position: relative;
+  width: 100%;
+}
+.section-about__tiitle {
+  margin-bottom: 4px;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  color: #B4B4B4;
+}
+.section-about__subtitle {
+  width: 518px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #7A7A7A;
+}
+.section-about__subtitle--reverse {
+  width: 312px;
+  color: #C79002;
+}
+.section-about__img--absolute {
+  position: absolute;
+  margin-right: 180px;
+  top: 0;
+  right: 0;
+  transform: translateY(-25%);
+}
+.section-about__img {
+  margin-right: 32px;
+}
+@media (min-width: 1024px) {
+  .section-about__img {
+    width: 350px;
+    height: 500px;
+  }
+}
+@media (min-width: 1280px) {
+  .section-about__img {
+    width: 460px;
+    height: 574px;
+  }
+}
+.section-about__box {
+  height: auto;
+  position: relative;
+}
+.section-about__img-container {
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 548px;
+  margin: 0;
+  margin-right: 85px;
+  transform: translateY(50%);
+}
+@media (min-width: 1024px) {
+  .swiper {
+    width: 428px;
+  }
+}
+@media (min-width: 1280px) {
+  .swiper {
+    width: 548px;
+  }
+}
+.swiper__container {
+  position: relative;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.swiper-wrapper {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 44px;
+}
+.swiper-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 44px;
+}
+.swiper-btn {
+  position: static;
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.swiper-btn::after {
+  content: "";
+}
+
 .restaurant {
   padding-top: 24px;
   padding-bottom: 40px;
@@ -277,12 +428,16 @@ p {
 }
 
 .restaurant__title {
-  margin-bottom: 12px;
+  font-family: "Film P3";
+  font-style: normal;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 1.08;
+  font-size: 64px;
+  line-height: 1.078125;
   letter-spacing: 0.3em;
+  text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 12px;
+  font-size: 40px;
 }
 @media screen and (min-width: 1024px) {
   .restaurant__title {
@@ -444,18 +599,27 @@ p {
     text-align: justify;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hotel__box {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
 
 .hotel__box-text {
   text-align: end;
 }
 
 .hotel__title {
-  margin-bottom: 12px;
+  font-family: "Film P3";
+  font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  line-height: 1.08;
+  line-height: 1.075;
   letter-spacing: 0.3em;
+  text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 12px;
 }
 @media screen and (min-width: 1024px) {
   .hotel__title {
