@@ -11,13 +11,17 @@ p {
     height: auto;
 }
 
-.link {
+a {
     text-decoration: none;
     // transition: color 250ms $transitionTimeFunction;
 }
 
-.list {
+ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+address {
+    font-style: normal;
 }
