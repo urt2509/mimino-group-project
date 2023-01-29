@@ -1,16 +1,7 @@
 .section {
     &__brand-title {
+        @include logo-title-tablet-desktop (#494848);
         margin-bottom: 24px;
-        font-family: 'Film P3';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 69px;
-    
-        letter-spacing: 0.3em;
-        text-transform: uppercase;
-    
-        color: #494848;
     }
 
 }
@@ -79,8 +70,8 @@
     &__box {
         height: auto;
         position: relative;
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
         // transform: translateY(-25%);
     }
 
