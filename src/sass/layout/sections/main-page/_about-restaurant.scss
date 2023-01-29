@@ -1,3 +1,18 @@
+.section {
+    &__tiitle {
+
+    }
+
+    &__brand-title {
+
+    }
+
+    &__subtitle {
+        width: 518px;
+    }
+
+}
+
 .section-ab-rest {
     background-color: #FFFDEE;
     padding: 120px 0 58px;
@@ -12,9 +27,7 @@
         margin-bottom: 162px;
     }
 
-    &__subtitle {
-        width: 518px;
-    }
+
 
     &__subtitle2 {
         width: 312px;
@@ -24,7 +37,6 @@
         position: relative;
         width: 460px;
         height: 574px;
-        
     }
 
     &__img {
@@ -32,7 +44,6 @@
         
         top: -153px;
         left: 0;
-        background-color: red;
     }
 
     &__img2-container {
@@ -41,8 +52,13 @@
     }
 
     &__img2 {
-        background-color: red;
         margin-right: 32px;
+    }
+
+    &__img2-box {
+        height: auto;
+        position: relative;
+        transform: translateY(-25%);
     }
 
 
@@ -50,35 +66,51 @@
 }
 
 .swiper {
-    position: relative;
-    transform: translateY(-50%);
-    margin-left: 562px;
-    margin-right: auto;
-}
+    width: 548px;
+    margin: 0;
 
-.swiper-wrapper {
-    list-style-type: none;
-    padding: 0;
-    // align-items: flex-end;
-}
+    &__container {
+        position: relative;
+        
+        transform: translateY(-50%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
 
-.swiper-slide {
-    // width: auto !important;;/
-}
+    &-wrapper {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 44px;
+    }
 
-.swiper-inner {
+    &-slide {
+        width: 254px !important;
+    }
+
+    &-inner {
         height: 254px;
-        width: 254px;
         background-color: red;
-}
+    }
+    
+    &-btns {
+        display: flex;
+        justify-content: flex-end;
+        gap: 44px;
+    }
 
-.swiper-btn {
-    position: static;
-    // align-items: flex-start;
-}
+    &-btn {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
 
-.swiper-btns {
-    // position: static;
-    display: flex;
-    justify-content: flex-end;
+        &::after {
+            content: '';
+        }
+    }
 }
