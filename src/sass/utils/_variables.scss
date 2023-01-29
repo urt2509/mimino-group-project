@@ -2,4 +2,9 @@ $mobileScreen: 414px;
 $tabletScreen: 1024px;
 $desktopScreen: 1280px;
 
-// $transitionTimeFunction: cubic-bezier(0.4, 0, 0.2, 1);
+// mixin buttons
+$buttons-min-width: 232px;
+$buttons-background: #000000;
+$buttons-border-radius: 25px;
+
+$transitionTimeFunction: cubic-bezier(0.4, 0, 0.2, 1);
