@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;  /* bold */
+    
+    // background-color: var(--primary-bcg-color);
+    // color: var(--primary-text-color);
+    // letter-spacing: 0.03em;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $mobileScreen) {
+        max-width: $mobileScreen;
+    }
+
+    @media screen and (min-width: $tabletScreen) {
+        max-width: $tabletScreen;
+        padding-left: 47px;
+        padding-right: 47px;
+    }
+
+    @media screen and (min-width: $desktopScreen) {
+        max-width: $desktopScreen;
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+// to hide section title 
+.hide {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    overflow: hidden;
+    word-wrap: normal !important;
+}
