@@ -24,7 +24,6 @@
 		margin-bottom: 32px;
 		min-width: 384px;
 
-		font-family: 'Montserrat';
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 1.25;
@@ -32,23 +31,22 @@
 		color: #7A7A7A;
 
 		@media screen and (min-width: $tabletScreen) {
-			width: 757px;
-
+			max-width: 757px;
+			flex-basis: calc((100% - 1 * 80px) / 2);
 		}
+
+		@media screen and (min-width: $desktopScreen) {
+			flex-basis: calc((100% - 1 * 159px) / 2);
 	}
-	&__list {
-		// flex-wrap: wrap;
-		// display: flex;
 	}
+
 	&__item {
 		margin-bottom: 32px;
-		min-width: 384px;
+		// min-width: 384px;
 
-		@media screen and (min-width: $tabletScreen) {
-			min-width: 400px;
-			display: flex;
-			gap: 80px;
-		}
+		// @media screen and (min-width: $tabletScreen) {
+		// 	min-width: 400px;
+		// }
 	}
 }
 
@@ -63,7 +61,19 @@
 	color: #000000;
 	text-transform: uppercase;
 }
+
+.amenities-room__conteiner {
+	@media screen and (min-width: $tabletScreen) {
+			display: flex;
+			gap: 80px;
+		}
+		@media screen and (min-width: $desktopScreen) {
+			gap: 159px;
+	}
+}
+
 .amenities-room__text {
+	display: inline-block;
 	margin-top: 0;
 	margin-bottom: 16px;
 
@@ -81,5 +91,48 @@
 
 	@media screen and (min-width: $tabletScreen) {
 		margin-bottom: 0;
+	}
+}
+
+.amenities-room__btn {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+
+	@media screen and (min-width: $tabletScreen) {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+}
+
+.return__link {
+	display: flex;
+	align-items: center;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.02em;
+
+	color: #C79002;
+
+	@media screen and (min-width: $tabletScreen) {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+
+	&:hover,
+	&:focus {
+		color: #F3C653;
+	}
+}
+
+.return__icon {
+	margin-left: 12px;
+	fill: currentColor;
+
+	@media screen and (min-width: $tabletScreen) {
+		margin-left: 16px;
 	}
 }
