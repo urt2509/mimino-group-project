@@ -11,16 +11,10 @@
 }
 
 .restaurant__title {
+  @include logo-title-tablet-desktop(#ffffff);
   margin-bottom: 12px;
 
-  font-weight: 700;
   font-size: 40px;
-  line-height: 1.08;
-
-  letter-spacing: 0.3em;
-
-  color: #ffffff;
-
   @media screen and (min-width: $tabletScreen) {
     margin-bottom: 16px;
 
