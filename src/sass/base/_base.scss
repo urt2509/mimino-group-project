@@ -74,3 +74,11 @@ img {
   overflow: hidden;
   word-wrap: normal !important;
 }
+
+.section {
+  &__brand-title {
+    margin-bottom: 24px;
+    
+    @include logo-title-tablet-desktop (#494848);
+  }
+}

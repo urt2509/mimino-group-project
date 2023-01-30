@@ -1,0 +1,62 @@
+// main slider
+// normal
+.swiper-main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    // width: 548px;
+    margin: 0;
+    transform: translateY(50%);
+
+    @media (min-width: 1024px) {
+        width: 428px;
+    }
+
+    @media (min-width: 1280px) {
+        width: 548px;
+    }
+
+    &__swiper-wrapper {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 36px;
+    }
+
+    &__arrow {
+        fill: $arrowsSectionAboutColor;
+    }
+}
+
+// general style
+.swiper-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 44px;
+}
+
+.swiper-btn {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        content: '';
+    }
+}
+
+// reverse
+.reverse {
+    .swiper-main {
+        left: 0;
+        margin: 0 !important;
+    }
+
+    .swiper-btns {
+        justify-content: flex-start !important;
+    }
+}

@@ -1,0 +1,83 @@
+// normal
+.section-about {
+    background-color: $bgcSectionAboutColor;
+    padding: 120px 0 225px;
+
+    &__container {
+        display: flex;
+        margin-bottom: 162px;
+    }
+
+    &__content {
+        position: relative;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 4px;
+        font-family: 'Times New Roman';
+        font-weight: 400;
+        font-size: 32px;
+        line-height: calc(37/32);
+        color: $titleSectionAboutColor;
+    }
+
+    &__subtitle {
+        width: 518px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: calc(20/16);
+        letter-spacing: 0.02em;
+
+        color: $subtitleSectionAboutColor;
+    }
+
+    &__subtitle--reverse {
+        width: 312px;
+        color: $brownSectionAboutColor;
+        margin-left: 32px;
+    }
+
+    &__img--absolute {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-25%);
+    }
+
+    &__box {
+        height: auto;
+        position: relative;
+    }
+
+    &__img-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+// reverse
+.reverse {
+    .section-about {
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        &__img-container {
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        &__img--absolute {
+            left: 0;
+        }
+
+        &__subtitle--reverse {
+            margin-left: 0;
+            margin-right: 32px;
+        }
+    }
+}
