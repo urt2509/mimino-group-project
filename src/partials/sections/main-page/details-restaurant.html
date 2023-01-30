@@ -1,4 +1,4 @@
-<section class="restaurant">
+<section class="restaurant" data-slider="details-slider">
   <div class="container">
     <div class="rextaurant__box-text">
       <h2 class="restaurant__title">MIMIHO</h2>
@@ -9,62 +9,137 @@
       </p>
     </div>
     <div class="restaurant-slider__box">
-      <div class="restaurant-slider__block">
-        <div>
-          <ul class="list">
-            <li>
-              <picture>
-                <source />
-                <source />
-                <img src="#" alt="" />
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source />
-                <source />
-                <img src="#" alt="" />
-              </picture>
-            </li>
-            <li>
-              <picture>
-                <source />
-                <source />
-                <img src="#" alt=""
-              /></picture>
-            </li>
-          </ul>
-          <picture>
-            <source srcset="#" />
-            <source srcset="#" />
-            <img class="restaurant-slider__picture" src="#" alt="" />
-          </picture>
-        </div>
-        <div class="restaurant-slider__box-icon">
+      <div class="swiper restaurant-slider__block">
+        <ul class="list swiper-wrapper">
+          <li class="swiper-slide">
+            <picture>
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:1280px)"
+              />
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:1024px)"
+              />
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:414px)"
+              />
+              <img
+                srcset="
+                  ./images/mobile_slider_restaurant_1.jpg    1x,
+                  ./images/mobile_slider_restaurant_1@2x.jpg 2x
+                "
+                src="./images/mobile_slider_restaurant_1.jpg"
+                alt=""
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:1280px)"
+              />
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:1024px)"
+              />
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:414px)"
+              />
+              <img
+                srcset="
+                  ./images/mobile_slider_restaurant_1.jpg    1x,
+                  ./images/mobile_slider_restaurant_1@2x.jpg 2x
+                "
+                src="./images/mobile_slider_restaurant_1.jpg"
+                alt=""
+              />
+            </picture>
+          </li>
+          <li class="swiper-slide">
+            <picture>
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:1280px)"
+              />
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:1024px)"
+              />
+              <source
+                srcset="
+                  ./images/slider_restaurant_1.jpg    1x,
+                  ./images/slider_restaurant_1@2x.jpg 2x
+                "
+                media="(min-width:414px)"
+              />
+              <img
+                srcset="
+                  ./images/mobile_slider_restaurant_1.jpg    1x,
+                  ./images/mobile_slider_restaurant_1@2x.jpg 2x
+                "
+                src="./images/mobile_slider_restaurant_1.jpg"
+                alt=""
+              />
+            </picture>
+          </li>
+        </ul>
+        <div class="swiper-btns restaurant-slider__box-icon">
           <button
             type="button"
-            class="restaurant-slider__button-arrow"
-            href="#"
+            class="swiper-btn swiper-button-next restaurant-slider__button-arrow"
           >
             <svg class="restaurant-slider__icon">
               <use href="./images/icon.svg#icon-left-arrow"></use>
             </svg>
           </button>
-          <button type="button" class="restaurant-slider__button-arrow" href="">
-            <svg class="restaurant-slider__icon">
+          <button
+            type="button"
+            class="swiper-btns restaurant-slider__button-arrow"
+          >
+            <svg class="swiper-button-prev restaurant-slider__icon">
               <use href="./images/icon.svg#icon-right-arrow"></use>
             </svg>
           </button>
         </div>
       </div>
-      <div class="rextaurant__box-buttons">
-        <button class="restaurant__button" type="submit">
-          Забронювати столик
-        </button>
-        <a class="restaurant__link" href="/src/restaurant.html"
-          >Переглянути меню</a
-        >
-      </div>
+    </div>
+    <div class="rextaurant__box-buttons">
+      <button class="restaurant__button" type="submit">
+        Забронювати столик
+      </button>
+      <a class="restaurant__link" href="/src/restaurant.html"
+        >Переглянути меню</a
+      >
     </div>
   </div>
+  <button type="button" class="button-one">Забронювати</button>
+  <button type="button" class="button-two">Привіт</button>
 </section>
