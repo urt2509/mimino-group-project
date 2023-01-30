@@ -43,6 +43,8 @@
         top: 0;
         right: 0;
         transform: translateY(-25%);
+        box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
     }
 
     &__box {
@@ -53,6 +55,11 @@
     &__img-container {
         display: flex;
         align-items: center;
+    }
+
+    &__img {
+        box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
     }
 }
 
