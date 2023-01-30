@@ -35,14 +35,14 @@ body.lock {
 
   &__body {
     min-height: 100%;
-   
+
     align-items: center;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     max-width: 414px;
     width: 100%;
-   
+
     transition: all 0.8s ease 0s;
   }
 
@@ -54,7 +54,7 @@ body.lock {
     overflow-x: hidden;
     background: #fff;
     box-shadow: 0px 0px 30px rgba(41, 48, 61, 0.15);
-  
+
 
 
     transition: all 0.8s ease 0s;
@@ -79,10 +79,10 @@ body.lock {
     top: 20px;
     width: 24px;
     height: 24px;
+    padding: 0;
     fill: #000000;
-    border-radius: 50%;
-    outline: transparent;
-    
+    border: none;
+    background: transparent;
   }
 }
 
@@ -113,9 +113,11 @@ body.lock {
   &__lable {
     display: block;
     margin-bottom: 20px;
-  &:last-of-type {
-    margin-bottom: 40px;
-  }
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+
     margin-left: 12px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -130,10 +132,12 @@ body.lock {
 
     color: #c79002;
   }
-&__thumb {
-  position: relative;
-  
-}
+
+  &__thumb {
+    position: relative;
+
+  }
+
   &__select {
     margin-bottom: 8px;
     display: flex;
@@ -149,7 +153,7 @@ body.lock {
     letter-spacing: 0.05em;
 
     color: #808080;
-  
+
     border: 1px solid $brownContactColor;
 
     &::after {
@@ -164,6 +168,7 @@ body.lock {
       // margin-top: -10px;
       // margin-right: 15px;
     }
+
     &:hover,
     &:active,
     &:focus {
