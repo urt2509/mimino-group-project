@@ -12,36 +12,56 @@
 <div data-popup-target="restaurant" class="popup">
   <div class="popup__body">
     <div class="popup__content">
-      <button type="button" class="popup__close close-popup">X</button>
+      <button type="button" class="popup__close close-popup">
+        <svg widht="24px" height="24px">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
       <h2 class="popup__title">Забронювати столик</h2>
       <form class="user-form">
-        <label for="user-name" class="form__lable">Ім'я</label>
+        <input
+          type="text"
+          name="user-name"
+          id="user-name"
+          class="user-form__area"
+          placeholder="Ваше ім’я"
+        />
+        <label for="user-name" class="user-form__lable">Ім'я</label>
+        <input
+          name="user-tel"
+          type="text"
+          class="user-form__area js-inputmask"
+        />
+        <label for="user-tel" class="user-form__lable">Телефон</label>
+        <div class="user-form__thumb">
+          <select name="number-of-visitors" class="user-form__select js-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <label for="number-of-visitors" class="user-form__lable"
+            >Столик на яку кількість осіб?</label
+          >
+        </div>
 
-        <input type="text" name="user-name" id="user-name" class="form__area" />
-        <input name="user-tel" type="text" class="js-inputmask" />
-        <label for="user-tel" class="form__lable">Телефон</label>
-
-        <select name="testselect" class="js-select">
-          <option value="1">option1</option>
-          <option value="11">option11</option>
-          <option value="111">option111</option>
-          <option value="1111">option1111</option>
-          <option value="test">test</option>
-          <option value="test1">test1</option>
-          <option value="car">car</option>
-          <option value="car1">car1</option>
-        </select>
-     
-        <select name="testselect" class="js-select">
-          <option value="1">option1</option>
-          <option value="11">option11</option>
-          <option value="111">option111</option>
-          <option value="1111">option1111</option>
-          <option value="test">test</option>
-          <option value="test1">test1</option>
-          <option value="car">car</option>
-          <option value="car1">car1</option>
-        </select>
+        <div class="user-form__thumb">
+          <select name="date" class="user-form__select js-select">
+            <option value="today">Сьогодні</option>
+            <option value="tomorrow">Завтра</option>
+            <option value="after-tomorrow">Післязавтра</option>
+          </select>
+          <label for="date" class="user-form__lable"
+            >На яку дату бронювати?</label
+          >
+        </div>
+        <button type="submit" class="user-form__button">
+          Оформити бронювання
+        </button>
       </form>
     </div>
   </div>
