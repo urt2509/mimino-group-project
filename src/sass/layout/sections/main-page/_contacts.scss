@@ -1,11 +1,13 @@
 .contacts {
+    background-color:  $bcgContactColor;
+    
     &-container {
         display: flex;
         flex-direction: column;
         padding-top: 36px;
         padding-bottom: 32px;
-        background-color:  $bcgContactColor;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        // background-color:  $bcgContactColor;
+        // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
         @include for-tablet-up {
             padding-top: 56px;
