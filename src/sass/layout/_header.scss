@@ -42,7 +42,7 @@
 
   &__link {
     display: flex;
-    gap: 6px;
+    gap: 12px;
     align-items: center;
 
     @media screen and(min-width: $tabletScreen) {
@@ -62,7 +62,7 @@
   &__item {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 12px;
 
     @media screen and(min-width: $tabletScreen) {
       gap: 32px;
@@ -142,7 +142,7 @@
 
     @media screen and(min-width: $desktopScreen) {
       display: flex;
-      gap: 21px;
+      gap: 23px;
       margin-left: 60px;
     }
   }
