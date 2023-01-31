@@ -78,7 +78,11 @@ img {
 .section {
   &__brand-title {
     margin-bottom: 24px;
-    
-    @include logo-title-tablet-desktop (#494848);
+
+    @include logo-title-mobile(#494848);
+
+    @include for-tablet-up {
+      @include logo-title-tablet-desktop (#494848);
+    }
   }
 }

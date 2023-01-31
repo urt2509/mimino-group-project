@@ -1,19 +1,26 @@
 // main slider
 // normal
 .swiper-main {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    // width: 548px;
     margin: 0;
-    transform: translateY(50%);
 
-    @media (min-width: 1024px) {
-        width: 428px;
+    @include for-tablet-down {
+        flex-basis: 540px;
+        flex-shrink: 0;
+        transform: translateX(30px);
     }
 
-    @media (min-width: 1280px) {
+
+    @include for-tablet-up {
+        width: 428px;
+        position: absolute;
+        transform: translateY(80%);
+        bottom: 0;
+        right: 0;
+    }
+
+    @include for-desktop-up {
         width: 548px;
+        transform: translateY(50%);
     }
 
     &__swiper-wrapper {
@@ -21,7 +28,13 @@
         padding: 0;
         margin: 0;
         margin-bottom: 36px;
+
+        @include for-tablet-down {
+            height: 245px;
+        }
     }
+
+
 
     &__img {
         // box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
@@ -44,8 +57,17 @@
 // general style
 .swiper-btns {
     display: flex;
-    justify-content: flex-end;
     gap: 44px;
+
+    @include for-phone-up {
+        justify-content: flex-end;
+        width: 350px;  
+    }
+
+    @include for-tablet-up {
+        justify-content: flex-end;
+        width: 100%;
+    }
 }
 
 .swiper-btn {
@@ -62,14 +84,56 @@
     }
 }
 
+
+.swiper-slide-next {
+    @include for-tablet-down {
+        opacity: 60%;
+        transition: opacity $transitionMsFunction $transitionTimeFunction;
+    }
+}
+
 // reverse
 .reverse {
+
+    
     .swiper-main {
         left: 0;
         margin: 0 !important;
+
+        @include for-tablet-down {
+            transform: translateX(-30px);
+        }
     }
 
     .swiper-btns {
-        justify-content: flex-start !important;
+        justify-content: flex-end;
+
+        @include for-phone-only {
+            width: 100%;
+        }
+        @include for-phone-up {
+            width: 300px;
+        }
+    
+        @include for-tablet-up {
+            width: 100%;
+        }
+
+        @include for-tablet-up {
+            justify-content: flex-start !important;
+        }
+    }
+
+    .swiper-slide-next {
+        @include for-tablet-down {
+            opacity: 100%;
+        }
+    }
+
+    .is-play {
+        @include for-tablet-down {
+            opacity: 60%;
+            transition: opacity $transitionMsFunction $transitionTimeFunction;
+        }
     }
 }
