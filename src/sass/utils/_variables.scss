@@ -20,9 +20,11 @@ $bcgSemitranspBtnColor: rgba(0, 0, 0, 0.4); //  semitransparent button color
 
 // header variables
 $whiteColor: #ffffff;
-$headerShadow: 180deg;
 $blackColor: #000000;
-$blackTransp55Color: rgba(0, 0, 0, 0.55); // transparent 54.17%
+$headerShadow: linear-gradient(180deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.55) 54.17%,
+    rgba(0, 0, 0, 0) 100%);
 
 
 // section Contact variables
