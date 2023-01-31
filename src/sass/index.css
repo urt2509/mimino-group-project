@@ -1202,6 +1202,22 @@ body {
   margin-bottom: 32px;
 }
 
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .section__button {
+    justify-content: end;
+    margin-right: 47px;
+    margin-top: 41px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1280px) {
+  .section__button {
+    justify-content: end;
+    margin-right: 85px;
+    margin-top: 32px;
+    margin-bottom: 60px;
+  }
+}
 .restaurant-menu {
   width: 100%;
 }
@@ -1273,22 +1289,6 @@ body {
 @media (min-width: 1024px) {
   .menu__item:nth-last-child(2n+1) {
     margin-right: 0;
-  }
-}
-@media (min-width: 1024px) {
-  .section__button {
-    display: block;
-    position: absolute;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .section__button {
-    right: 47px;
-  }
-}
-@media (min-width: 1280px) {
-  .section__button {
-    right: 85px;
   }
 }
 .restaurant-button {
