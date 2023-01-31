@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>restaurant-menu</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!--header-->
+    <header>
+      <container class="container">
+        <section class="section">
+          <h2>МЕНЮ РЕСТОРАНУ</h2>
+          <div class="hot-dishes">
+            <h3>Гарячі страви</h3>
+            <table class="restaurant-menu">
+              <tr class="restaurant-menu__row">
+                <h4>Борщ з телятини з квасолею</h4>
+                <td>
+                  <p class="restaurant-menu-ingredients">
+                    Телятина, картопля, капуста, морква, цибуля, квасоля, часник, помідори, зелень,
+                    сметана
+                  </p>
+                </td>
+                <td class="weight">400 г</td>
+                <td class="price">240 грн</td>
+              </tr>
+            </table>
+            <h4>Суп сирний з куркою</h4>
+            <table class="restaurant-menu">
+              <tr class="restaurant-menu__row">
+                <td>
+                  <p class="restaurant-menu-ingredients">
+                    Курятина, картопля, морква, цибуля, печериці, сир м’який, зелень
+                  </p>
+                </td>
+                <td class="weight">400 г</td>
+                <td class="price">200 грн</td>
+              </tr>
+            </table>
+            <table class="restaurant-menu">
+              <tr class="restaurant-menu__row">
+                <h4>Паста карбонара</h4>
+                <td>
+                  <p class="restaurant-menu-ingredients">
+                    Паста тальятеле, бекон, вершки, сир пармезан, яйце, зелень
+                  </p>
+                </td>
+                <td class="weight">350 г</td>
+                <td class="price">430 грн</td>
+              </tr>
+            </table>
+            <table class="restaurant-menu">
+              <tr class="restaurant-menu__row">
+                <h4>Стейк зі свинини</h4>
+                <td>
+                  <p class="restaurant-menu-ingredients">
+                    Свиняча вирізка, спеціі, подається з соусом солодкий чилі та овочами
+                  </p>
+                </td>
+                <td class="weight">400 г</td>
+                <td class="price">500 грн</td>
+              </tr>
+            </table>
+            <table class="restaurant-menu">
+              <tr class="restaurant-menu__row">
+                <h4>Горбуша в соусі з білого вина</h4>
+                <td>
+                  <p class="restaurant-menu-ingredients">
+                    Ніжна горбуша, вершковий соус на основі білого вина
+                  </p>
+                </td>
+                <td class="weight">400 г</td>
+                <td class="price">400 грн</td>
+              </tr>
+            </table>
+          </div>
+          <div class="side dishes">
+            <h3>Гарніри та закуски</h3>
+          <table class="restaurant-menu">
+            <tr class="restaurant-menu__row">
+              <h4>Запечені овочі</h4>
+              <td>
+                <p>Кабачок, перець, помідор, баклажан</p>
+              </td>
+              <td class="weight">200 г</td>
+              <td class="price">230 грн</td>
+            </tr>
+            <tr>
+              <td>
+                Картопля фрі
+                <p>Картопля, соус томатний</p>
+              </td>
+              <td class="weight">150 г</td>
+              <td class="price">160 грн</td>
+            </tr>
+            <tr>
+              <td>
+                Картопля по-селянськи
+                <p>Картопля, спеції, соус пікантний</p>
+              </td>
+              <td class="weight">150 г</td>
+              <td class="price">160 грн</td>
+            </tr>
+            <tr>
+              <td>
+                Хрумкі соління з бочки
+                <p>Огірок солений, помідор квашений, квашена капуста, морква по-корейські</p>
+              </td>
+              <td class="weight">250 г</td>
+              <td class="price">350 грн</td>
+            </tr>
+            <tr>
+              <td>
+                Крильця курячі в медовому соусі
+                <p>
+                  Крильця курячі, гірчично-медовий соус, подається з морквою, селерою і соусом
+                  блючиз
+                </p>
+              </td>
+              <td class="weight">400 г</td>
+              <td class="price">420 грн</td>
+            </tr>
+          </table>
+          </div>
+
+          <!-- 
+          <h3>Салати</h3>
+          <table class="restaurant-menu">
+            <tr>
+              <td>
+                Цезар з куркою
+                <p>Куряче філе, листя салату, помідори чері, сир пармезан, грінки, соус цезар</p>
+              </td>
+              <td>230 г</td>
+              <td>450 грн</td>
+            </tr>
+            <tr>
+              <td>
+                Цезар з креветками
+                <p>
+                  Тигрові креветки, листя салату, помідори чері, сир пармезан, грінки, соус цезар
+                </p>
+              </td>
+              <td>230 г</td>
+              <td>300 грн</td>
+            </tr>
+            <tr>
+              <td>
+                Грецький салат
+                <p>
+                  Свіжі огірок, помідор, болгарський перець, оливки, сир бринза, листя салату, соус
+                </p>
+              </td>
+              <td>230 г</td>
+              <td>280 грн</td>
+            </tr>
+            <tr>
+              <td>
+                М’ясний салат
+                <p>
+                  Куряче філе або свиняча вирізка, свіжі огірок, помідор, болгарський перець, соус
+                  ранч
+                </p>
+              </td>
+              <td>230 г</td>
+              <td>300 грн</td>
+            </tr>
+          </table>
+          <h3>Десерти</h3>
+          <table class="restaurant-menu">
+            <tr>
+              <td>Торт наполеон</td>
+              <td>230 г</td>
+              <td>300 грн</td>
+            </tr>
+            <tr>
+              <td>Торт маковий</td>
+              <td>230 г</td>
+              <td>300 грн</td>
+            </tr>
+            <tr>
+              <td>Тірамісу</td>
+              <td>120 г</td>
+              <td>260 грн</td>
+            </tr>
+          </table>
+          <h3>Напої</h3>
+          <table class="restaurant-menu">
+            <tr>
+              <td>Чай чорний/зелений</td>
+              <td>500 мл</td>
+              <td>100 грн</td>
+            </tr>
+            <tr>
+              <td>Еспресо</td>
+              <td>30 мл</td>
+              <td>100 грн</td>
+            </tr>
+            <tr>
+              <td>Американо</td>
+              <td>150 мл</td>
+              <td>100 грн</td>
+            </tr>
+            <tr>
+              <td>Капучино</td>
+              <td>200 мл</td>
+              <td>160 грн</td>
+            </tr>
+            <tr>
+              <td>Лате</td>
+              <td>200 мл</td>
+              <td>160 грн</td>
+            </tr>
+          </table> -->
+          <button type="button">Забронювати столик</button>
+        </section>
+      </container>
+    </header>
+    <!--footer-->
+    <footer></footer>
+  </body>
+</html>
+
