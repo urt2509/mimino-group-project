@@ -1,26 +1,10 @@
 .header {
   position: absolute;
-  background: linear-gradient(
-    180deg,
-    #000000 0%,
-    rgba(0, 0, 0, 0.55) 54.17%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: $headerShadow;
   z-index: 3;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  // max-width: 414px;
-  // margin: 0 auto;
-
-  // @media screen and(min-width: $tabletScreen) {
-  //   max-width: 1024px;
-  //   width: 100%;
-  // }
-
-  // @media screen and(min-width: $desktopScreen) {
-  //   max-width: 1280px;
-  // }
 
   &__logo {
     text-decoration: none;
@@ -130,6 +114,7 @@
     display: flex;
     align-items: center;
     font-family: 'Montserrat';
+    font-weight: 300;
     text-decoration: none;
     font-size: 14px;
     line-height: 1.214;
@@ -183,14 +168,18 @@
       color: $brownContactColor;
     }
   }
+  &__social-icon--facebook {
+    color: $accentLightYellowColor;
+    transition: color 250ms linear;
+    &:hover,
+    &:focus {
+      color: $brownContactColor;
+    }
+  }
 }
 
-.header .container {
+.header-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.header-scroll {
-  position: fixed;
 }
