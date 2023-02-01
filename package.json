@@ -2,7 +2,7 @@
   "name": "mimino-group-project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://urt2509.github.io/mimino-group-projecte",
+  "homepage": "https://urt2509.github.io/mimino-group-project",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /mimino-group-project/"
