@@ -1,0 +1,514 @@
+.hero {
+  position: relative;
+
+  max-width: 414px;
+  width: 100%;
+  height: 740px;
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 181px;
+  padding-bottom: 102px;
+
+  text-align: center;
+
+  background-color: $blackColor;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 24px;
+    max-width: 303px;
+    max-height: 103px;
+
+    font-family: 'Film P3', sans-serif;
+    font-size: 96px;
+    line-height: 1.07;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $whiteColor;
+
+    @media screen and (max-width: 321px) {
+      font-size: 80px;
+      line-height: 1.01;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 40px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.25;
+
+    letter-spacing: 0.02em;
+
+    color: $whiteColor;
+  }
+
+  &__tagline {
+    display: block;
+
+    font-family: 'Times New Roman', serif;
+    font-size: 32px;
+    line-height: 1.16;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $whiteColor;
+  }
+
+  &__geolink {
+    position: absolute;
+
+    padding: 8px 5px;
+    width: 210px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    color: $heroGeolink;
+    text-align: left;
+
+    background-color: transparent;
+    border: 1px solid $accentLightYellowColor;
+    border-radius: 2px;
+
+    @include for-tablet-down {
+      top: 64px;
+      right: 15px;
+    }
+  }
+
+  &__geolink-icon {
+    margin-right: 8px;
+
+    fill: $accentYellowColor;
+  }
+
+  &__buttons-box {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @include for-tablet-down {
+      left: 50%;
+      bottom: 102px;
+      transform: translateX(-50%);
+    }
+
+    // @media screen and (max-width: 237px) {
+    //   position: absolute;
+    //   bottom: 60px;
+    // }
+  }
+
+  &__buttons {
+    @include button_MinWidth_Bg($buttons-background: transparent);
+    min-width: 236px;
+    line-height: 1.25;
+
+    padding: 14px 24px;
+
+    @include for-phone-only {
+      height: auto;
+    }
+  }
+
+  &__social {
+    position: absolute;
+
+    @include for-tablet-desktop {
+      left: 47px;
+      bottom: 15px;
+    }
+
+    @include for-tablet-down {
+      left: 15px;
+      bottom: 20px;
+    }
+  }
+}
+
+.hero-homepage {
+  background-image: linear-gradient($bg-overlay, $bg-overlay),
+    url(../images/hero/mobile-hero-home.jpg);
+
+  &__buttons {
+    @include for-tablet-desktop {
+      background-color: $blackColor;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/mobile-hero-home@2x.jpg);
+  }
+}
+
+.hero-restaurant {
+  background-image: linear-gradient($bg-overlay, $bg-overlay),
+    url(../images/hero/mobile-hero-restaurant.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/mobile-hero-restaurant@2x.jpg);
+  }
+}
+
+.hero-hotel {
+  background-image: linear-gradient($bg-overlay, $bg-overlay),
+    url(../images/hero/mobile-hero-hotel.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/mobile-hero-hotel@2x.jpg);
+  }
+}
+
+.hero-room {
+  background-image: url(../images/hero/mobile-hero-hotel.jpg);
+
+  &__slider-button-box {
+    position: absolute;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @media screen and (max-width: 1279px) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__buttons-box {
+    position: absolute;
+    right: 73px;
+    bottom: 40px;
+  }
+
+  &__slider-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    fill: $accentYellowColor;
+
+    background-color: $bg-overlay;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  &__title-box {
+    position: absolute;
+    bottom: 118px;
+
+    text-align: left;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    width: 325px;
+
+    font-family: 'Times New Roman';
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.05em;
+    color: $whiteColor;
+
+    text-transform: uppercase;
+  }
+
+  &__title-part {
+    text-transform: lowercase;
+  }
+
+  &__title-text {
+    display: block;
+    width: 325px;
+
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: $whiteColor;
+  }
+
+  &__social {
+    @include for-tablet-down {
+      bottom: 14px;
+
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/mobile-hero-hotel@2x.jpg);
+  }
+}
+
+@include for-tablet-up {
+  .hero {
+    max-width: 1024px;
+    height: 720px;
+    padding-top: 181px;
+    padding-bottom: 257px;
+
+    &__title {
+      margin-bottom: 16px;
+      max-width: 404px;
+      max-height: 138px;
+
+      font-size: 128px;
+      line-height: 1.08;
+    }
+
+    &__subtitle {
+      margin-bottom: 56px;
+
+      font-size: 20px;
+      line-height: 1.2;
+
+      letter-spacing: 0.02em;
+    }
+
+    &__tagline {
+      font-size: 36px;
+      line-height: 1.14;
+    }
+
+    &__geolink {
+      left: 47px;
+      bottom: 64px;
+
+      width: 285px;
+      height: 56px;
+      padding: 8px 10px;
+
+      font-size: 16px;
+    }
+
+    &__geolink-icon {
+      margin-right: 10px;
+    }
+
+    &__buttons-box {
+      right: 47px;
+      bottom: 64px;
+
+      flex-direction: row;
+      gap: 40px;
+    }
+  }
+
+  .hero-homepage {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/tablet-hero-home.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($bg-overlay, $bg-overlay),
+        url(../images/hero/tablet-hero-home@2x.jpg);
+    }
+  }
+
+  .hero-restaurant {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/tablet-hero-restaurant.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($bg-overlay, $bg-overlay),
+        url(../images/hero/tablet-hero-restaurant@2.jpg);
+    }
+  }
+
+  .hero-hotel {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/tablet-hero-hotel.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($bg-overlay, $bg-overlay),
+        url(../images/hero/tablet-hero-hotel@2x.jpg);
+    }
+  }
+
+  .hero-room {
+    background-image: url(../images/hero/tablet-hero-hotel.jpg);
+
+    &__slider-button-box {
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+
+    &__title-box {
+      bottom: 102px;
+    }
+
+    &__title {
+      width: 510px;
+      margin-bottom: 24px;
+
+      font-size: 36px;
+      line-height: 1.14;
+    }
+
+    &__title-text {
+      width: 400px;
+
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    &__social {
+      flex-direction: row;
+
+      @media screen and (max-width: ($desktopScreen - 1px)) {
+        left: 372px;
+        bottom: 36px;
+      }
+    }
+
+    &__geolink {
+      left: 47px;
+      bottom: 22px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/tablet-hero-hotel@2x.jpg);
+    }
+  }
+}
+
+@include for-desktop-up {
+  .hero {
+    max-width: 1280px;
+    padding-top: 164px;
+    padding-bottom: 257px;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__subtitle {
+      margin-bottom: 64px;
+    }
+
+    &__geolink {
+      left: 85px;
+    }
+
+    &__buttons-box {
+      right: 85px;
+      bottom: 65px;
+
+      flex-direction: row;
+      gap: 60px;
+    }
+
+    &__buttons {
+      min-width: 254px;
+      height: 48px;
+      padding: 14px 24px;
+    }
+
+    &__social {
+      top: 38px;
+      right: 85px;
+    }
+  }
+
+  .hero-homepage {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/desktop-hero-home.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($bg-overlay, $bg-overlay),
+        url(../images/hero/desktop-hero-home@2.jpg);
+    }
+  }
+
+  .hero-restaurant {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/desktop-hero-restaurant.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($bg-overlay, $bg-overlay),
+        url(../images/hero/desktop-hero-restaurant@2.jpg);
+    }
+  }
+
+  .hero-hotel {
+    background-image: linear-gradient($bg-overlay, $bg-overlay),
+      url(../images/hero/desktop-hero-hotel.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($bg-overlay, $bg-overlay),
+        url(../images/hero/desktop-hero-hotel@2.jpg);
+    }
+  }
+
+  .hero-room {
+    background-image: url(../images/hero/desktop-hero-room.jpg);
+
+    &__slider-button-box {
+      left: 0;
+      bottom: 268px;
+
+      padding-left: 85px;
+      padding-right: 85px;
+    }
+
+    &__title-box {
+      bottom: 48px;
+    }
+
+    &__geolink {
+      display: none;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/desktop-hero-room@2.jpg);
+    }
+  }
+}
