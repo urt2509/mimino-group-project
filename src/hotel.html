@@ -20,7 +20,7 @@
         <include src="./partials/hero.html"></include>include
         src="./partials/header.html"></include>
 
-        <section class="section rooms" data-slider="team-slider">
+        <section class="section_rooms rooms" data-slider="team-slider">
             <div class="container">
                 <div class="section-about__container-content">
                   <div class="section-about__content">
@@ -34,16 +34,16 @@
                   </div>   
                         <h2 class="rooms_title">ДВОМІСНИЙ НОМЕР люкс</h2>   
                         <ul class="rooms_photos">
-                        <li class="rooms_main-photo">
-                            <img src="./images/hotel-page/common/bedroom-3-920.jpg" alt="room">
-                        </li>
-                        <li class="rooms_bottom-photo">    
-                            <img src="./images/hotel-page/slider/bathroom-3-508.jpg" alt="washbasin">
-                        </li>
-                        <li class="rooms_bottom-photo">
-                            <img src="./images/hotel-page/slider/living-space-3-508.jpg" alt="cup of tea">
-                        </li>    
-                    </ul>
+                            <li class="rooms_main-photo">
+                                <img src="./images/hotel-page/common/bedroom-3-244.jpg" alt="room">
+                            </li>
+                            <li class="rooms_bottom-photo">    
+                                <img src="./images/hotel-page/slider/bathroom-3-194.jpg" alt="washbasin">
+                            </li>
+                            <li class="rooms_bottom-photo">
+                                <img src="./images/hotel-page/slider/living-space-3-194.jpg" alt="cup of tea">
+                            </li>    
+                        </ul>
                     <div class="swiper-btns">
                         <button type="button" class="swiper-btn swiper-button-prev">
                         <svg class="swiper-main__arrow" width="32" height="32">
@@ -57,8 +57,13 @@
                         </button>
                     </div>
                     <div class="rooms_buttons">
-                        <button class="rooms_btn" type="submit" href="">Детальніше</button>
-                        <button class="rooms_btn" type="submit" href="">Переглянути ціни</button>
+                        <button data-popup-btn="rooms-but" class="rooms_btn" type="submit">
+                            Детальніше
+                          </button>
+                        <button data-popup-btn="rooms-but" class="rooms_btn" type="submit">
+                            Переглянути ціни
+                        </button>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -103,8 +108,12 @@
                         </button>
                     </div>
                     <div class="rooms_buttons">
-                        <button class="rooms_btn" type="submit" href="">Детальніше</button>
-                        <button class="rooms_btn" type="submit" href="">Переглянути ціни</button>
+                        <button data-popup-btn="rooms-but" class="rooms_btn" type="submit">
+                             Детальніше
+                            </button>
+                        <button data-popup-btn="rooms-but" class="rooms_btn" type="submit">
+                            Переглянути ціни
+                        </button>
                     </div>
                 </div>
             </div>
