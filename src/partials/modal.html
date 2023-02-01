@@ -1,12 +1,19 @@
 <div class="flex-box">
-  <a href="#" data-popup-btn="restaurant" class="popup-link">Ресторан</a>
+  <button type="button" data-popup-btn="restaurant" class="popup-link">
+    Restaurant
+  </button>
   <button type="button" data-popup-btn="hotel" class="popup-link">hotel</button>
-
-  <a href="#" data-popup-btn="room" class="popup-link">Попап 2</a>
-  <button type="button" data-popup-btn="test-modal" class="popup-link">
-    Попап 2
+  <button type="button" data-popup-btn="cost-hotel-1" class="popup-link">
+    Cost-hotel[Двомісний люкс]
+  </button>
+  <button type="button" data-popup-btn="cost-hotel-2" class="popup-link">
+    Cost-hotel[ТРЬОХМІСНИЙ НОМЕР]
+  </button>
+  <button type="button" data-popup-btn="cost-hotel-3" class="popup-link">
+    Cost-hotel[ДВОМІСНИЙ НОМЕР]
   </button>
 </div>
+
 <div data-popup-target="restaurant" class="popup">
   <div class="popup__body">
     <div class="popup__content">
@@ -25,15 +32,18 @@
             class="user-form__area"
             placeholder="Ваше ім’я"
           />
-          <label for="user-name" class="user-form__lable">Ім'я</label>
+          <label for="user-name" class="user-form__lable"
+            >На кого забронювати столик?</label
+          >
         </div>
+
         <div class="user-form__thumb-rest">
           <input
             name="user-tel"
             type="text"
             class="user-form__area js-inputmask"
           />
-          <label for="user-tel" class="user-form__lable">Телефон</label>
+          <label for="user-tel" class="user-form__lable">Номер телефону</label>
         </div>
 
         <div class="user-form__thumb-rest">
@@ -62,11 +72,11 @@
             >На яку дату бронювати?</label
           >
         </div>
-      </form>
 
-      <button type="submit" class="user-form__button">
-        Оформити бронювання
-      </button>
+        <button type="submit" class="user-form__button">
+          Оформити бронювання
+        </button>
+      </form>
     </div>
   </div>
 </div>
@@ -101,18 +111,17 @@
             <label for="user-tel" class="user-form__lable">Телефон</label>
           </div>
         </div>
-              <div class="user-form__thumb-hotel">
-            <select name="room-class" class="user-form__select js-select">
-              <option value="2xlux" selected>Двомісний люкс</option>
-              <option value="3x">Трьохмісний номер</option>
-              <option value="2x">Двохмісний номер</option>
-            </select>
-            <label for="room-class" class="user-form__lable"
-              >Категорія номеру</label
-            >
-          </div>
+        <div class="user-form__thumb-hotel">
+          <select name="room-class" class="user-form__select js-select">
+            <option value="2xlux" selected>Двомісний люкс</option>
+            <option value="3x">Трьохмісний номер</option>
+            <option value="2x">Двохмісний номер</option>
+          </select>
+          <label for="room-class" class="user-form__lable"
+            >Категорія номеру</label
+          >
+        </div>
         <div class="user-form__box">
-    
           <div class="user-form__thumb-hotel">
             <select name="arrival date" class="user-form__select js-select">
               <option value="today">Сьогодні</option>
@@ -126,27 +135,172 @@
 
           <div class="user-form__thumb-hotel">
             <select
-              name="
-date-of-departure"
+              name="date-of-departure"
               class="user-form__select js-select"
             >
               <option value="today">Сьогодні</option>
               <option value="tomorrow">Завтра</option>
               <option value="after-tomorrow">Післязавтра</option>
             </select>
-            <label
-              for="
-date-of-departure"
-              class="user-form__lable"
+            <label for="date-of-departure" class="user-form__lable"
               >Дата виїзду</label
             >
           </div>
         </div>
+        <button type="submit" class="user-form__button">
+          Оформити бронювання
+        </button>
       </form>
+    </div>
+  </div>
+</div>
 
-      <button type="submit" class="user-form__button">
-        Оформити бронювання
+<div data-popup-target="cost-hotel-1" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button type="button" class="popup__close close-popup">
+        <svg width="24px" height="24px">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
       </button>
+      <h2 class="popup__title">Ціни на номер</h2>
+      <h3 class="user-form__subtitle">Двомісний люкс</h3>
+      <span class="user-form__lable-cost">Категорія номеру</span>
+      <form class="user-form__cost-hotel">
+        <div class="user-form__thumb night">
+          <select
+            name="number-of-night"
+            class="user-form__select js-select"
+            style="opacity: 0; width: 0px; padding: 0px; height: 0px"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <label for="number-of-night" class="user-form__lable"
+            >Кількість ночей</label
+          >
+        </div>
+        <div class="user-form__thumb hotel-cost">
+          <input
+            type="text"
+            name="cost"
+            id="cost"
+            class="user-form__area"
+            placeholder="1000"
+            readonly
+          />
+          <label for="cost" class="user-form__lable">грн</label>
+        </div>
+        <button type="submit" class="user-form__button">
+          Забронювати номер
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div data-popup-target="cost-hotel-2" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button type="button" class="popup__close close-popup">
+        <svg width="24px" height="24px">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="popup__title">Ціни на номер</h2>
+      <h3 class="user-form__subtitle">Трьохмісний</h3>
+      <span class="user-form__lable-cost">Категорія номеру</span>
+      <form class="user-form__cost-hotel">
+        <div class="user-form__thumb night">
+          <select
+            name="number-of-night"
+            class="user-form__select js-select"
+            style="opacity: 0; width: 0px; padding: 0px; height: 0px"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <label for="number-of-night" class="user-form__lable"
+            >Кількість ночей</label
+          >
+        </div>
+        <div class="user-form__thumb hotel-cost">
+          <input
+            type="text"
+            name="cost"
+            id="cost"
+            class="user-form__area"
+            placeholder="2000"
+            readonly
+          />
+          <label for="cost" class="user-form__lable">грн</label>
+        </div>
+        <button type="submit" class="user-form__button">
+          Забронювати номер
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div data-popup-target="cost-hotel-3" class="popup">
+  <div class="popup__body">
+    <div class="popup__content">
+      <button type="button" class="popup__close close-popup">
+        <svg width="24px" height="24px">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
+      <h2 class="popup__title">Ціни на номер</h2>
+      <h3 class="user-form__subtitle">Двомісний</h3>
+      <span class="user-form__lable-cost">Категорія номеру</span>
+      <form class="user-form__cost-hotel">
+        <div class="user-form__thumb night">
+          <select
+            name="number-of-night"
+            class="user-form__select js-select"
+            style="opacity: 0; width: 0px; padding: 0px; height: 0px"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <label for="number-of-night" class="user-form__lable"
+            >Кількість ночей</label
+          >
+        </div>
+        <div class="user-form__thumb hotel-cost">
+          <input
+            type="text"
+            name="cost"
+            id="cost"
+            class="user-form__area"
+            placeholder="3000"
+            readonly
+          />
+          <label for="cost" class="user-form__lable">грн</label>
+        </div>
+        <button type="submit" class="user-form__button">
+          Забронювати номер
+        </button>
+      </form>
     </div>
   </div>
 </div>
