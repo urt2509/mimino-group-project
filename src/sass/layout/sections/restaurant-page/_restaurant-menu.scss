@@ -1,7 +1,6 @@
 body {
     background-color: $bgcSectionAboutColor;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: var(--primary-text-color);
     letter-spacing: 0.02em;
@@ -9,17 +8,16 @@ body {
     background-color: #F0ECD6; 
     }
 }
-h2,
-h3 {
-font-family: 'Times New Roman';
-}
+
 .section {
     padding-left: 15px;
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 32px;
     @media (min-width: $tabletScreen) {
     padding-top: 58px;
+    margin-top: 0;
     }
 
     @media screen and (min-width: $mobileScreen) {
@@ -118,11 +116,13 @@ font-family: 'Times New Roman';
 }
 
 .menu-title {
+    font-family: 'Times New Roman';
     margin-bottom: 32px;
     font-size: 32px;
     line-height: 1.15;
 }
 .menu-table-title {
+    font-family: 'Times New Roman';
     margin-bottom: 16px;
     font-size: 20px;
     line-height: 1.15;
