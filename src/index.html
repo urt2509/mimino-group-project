@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mіміно</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="./images/favicon.svg"
-      sizes="any"
-    />
-    <script type="module" src="./index.js"></script>
-  </head>
 
-  <body>
-    <header>
-      <include src="./partials/header.html"></include>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mіміно</title>
+  <link rel="stylesheet" href="./sass/index.scss" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg"
+    sizes="any" />
+  <script type="module" src="./index.js"></script>
+</head>
 
-    <main>
-      <include src="./partials/hero.html"></include>
-      <include src="./partials/sections/main-page/about-restaurant.html">
-      </include>
-      <include src="./partials/sections/main-page/details-restaurant.html">
-      </include>
-      <include src="./partials/sections/main-page/about-hotel.html"></include>
-      <include src="./partials/sections/main-page/details-hotel.html"></include>
-      <include src="./partials/sections/main-page/contacts.html"></include>
-      <include
-        src="./partials/sections/hotel-page/details-hotel.html"
-      ></include>
-      <include src="./partials/sections/room-page/section-amenities.html">
-      </include>
-    </main>
+<body>
+  <header>
+    <include src="./partials/header.html"></include>
+  </header>
 
-    <footer>
-      <include src="./partials/footer.html"></include>
-    </footer>
+  <main>
+    <include src="./partials/hero.html"></include>
+    <include src="./partials/sections/main-page/about-restaurant.html">
+    </include>
+    <include src="./partials/sections/main-page/details-restaurant.html">
+    </include>
+    <include src="./partials/sections/main-page/about-hotel.html"></include>
+    <include src="./partials/sections/main-page/details-hotel.html"></include>
+    <include src="./partials/sections/main-page/contacts.html"></include>
+     </main>
 
-    <!-- Модальне вікно з формами -->
+  <footer>
+    <include src="./partials/footer.html"></include>
 
-    <include src="./partials/modal.html"></include>
+  </footer>
 
-    <!-- Скріпти -->
+  <!-- Модальне вікно з формами -->
 
-    <script src="./js/vendors/swiper-bundle.min.js"></script>
-    <script src="./js/vendors/nice-select2.js"></script>
-  </body>
+  <include src="./partials/modal.html"></include>
+
+  <!-- Скріпти -->
+
+  <script src="./js/vendors/swiper-bundle.min.js"></script>
+  <script src="./js/vendors/nice-select2.js"></script>
+
+</body>
+
 </html>
+
