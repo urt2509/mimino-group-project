@@ -30,11 +30,6 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: $whiteColor;
-
-    @media screen and (max-width: 321px) {
-      font-size: 80px;
-      line-height: 1.01;
-    }
   }
 
   &__subtitle {
@@ -106,11 +101,6 @@
       bottom: 102px;
       transform: translateX(-50%);
     }
-
-    // @media screen and (max-width: 237px) {
-    //   position: absolute;
-    //   bottom: 60px;
-    // }
   }
 
   &__buttons {
@@ -440,14 +430,10 @@
 
     &__buttons {
       min-width: 254px;
-      height: 48px;
-      padding: 14px 24px;
     }
 
     &__social {
       display: none;
-      top: 38px;
-      right: 85px;
     }
   }
 
