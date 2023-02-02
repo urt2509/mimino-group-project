@@ -2,6 +2,72 @@
   padding-top: 24px;
   padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.65);
+
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(../images/home-page/bcg-details/bcg-details-hotel-mobile.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url(../images/home-page/bcg-details/bcg-details-hotel-mobile@2x.jpg);
+  }
+
+  @include for-tablet-up {
+    padding-top: 48px;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url(../images/home-page/bcg-details/bcg-details-hotel-tablet.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url(../images/home-page/bcg-details/bcg-details-hotel-tablet@2x.jpg);
+    }
+  }
+
+  @include for-desktop-up {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url(../images/home-page/bcg-details/bcg-details-hotel-descktop.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url(../images/home-page/bcg-details/bcg-details-hotel-descktop@2x.jpg);
+    }
+  }
+
+  @include for-tablet-up {
+    padding-top: 48px;
+  }
 }
 
 .hotel__box {
@@ -9,6 +75,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
 
+  margin-bottom: 48px;
   margin-right: 144px;
 
   @media screen and (min-width: $tabletScreen) {
@@ -35,6 +102,9 @@
 
     font-size: 64px;
   }
+  & span {
+    letter-spacing: normal;
+  }
 }
 
 .hotel__subtitle {
@@ -54,8 +124,6 @@
 }
 
 .hotel__text {
-  margin-bottom: 48px;
-
   font-weight: 600;
   font-size: 12px;
   line-height: 1.22;
@@ -63,16 +131,19 @@
 
   color: #bababa;
 
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     max-width: 549px;
-    margin-bottom: 40px;
 
     font-size: 16px;
+  }
+
+  @include for-desktop-up {
+    max-width: 595px;
   }
 }
 
 .hotel-slider__box {
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -81,6 +152,10 @@
 
 .hotel-slider__block {
   margin-right: 32px;
+
+  & ul {
+    margin-bottom: 24px;
+  }
 }
 
 .hotel-slider__box-icon {
@@ -126,7 +201,7 @@
 
   text-align: center;
 
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     margin-right: 47px;
     flex-direction: column;
     transform: translateY(-60px);
@@ -148,13 +223,3 @@
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-
-// .swiper {
-//   position: static;
-//   transform: translateY(0);
-//   width: 874px;
-// }
-
-// .swiper-slide {
-//   width: auto;
-// }
