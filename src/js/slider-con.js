@@ -145,19 +145,19 @@ function swiperSlider() {
                 // адаптив
                 breakpoints: {
                     // when window width is >= 414px
-                    414: {
+                    320: {
                         slidesPerView: 1.3,
                         spaceBetween: 20,
                     },
                     // when window width is >= 1024px
-                    1024: {
+                    768: {
                         slidesPerView: 1.3,
-                        spaceBetween: 19
+                        spaceBetween: 34,
                     },
                     // when window width is >= 1280px
                     1280: {
                         slidesPerView: 3,
-                        spaceBetween: 34
+                        spaceBetween: 87,
                     }
                 }
 
