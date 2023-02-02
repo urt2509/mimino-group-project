@@ -1093,12 +1093,6 @@ address {
   text-transform: uppercase;
   color: #ffffff;
 }
-@media screen and (max-width: 321px) {
-  .hero__title {
-    font-size: 80px;
-    line-height: 1.01;
-  }
-}
 .hero__subtitle {
   display: block;
   margin-bottom: 40px;
@@ -1443,12 +1437,9 @@ address {
   }
   .hero__buttons {
     min-width: 254px;
-    height: 48px;
-    padding: 14px 24px;
   }
   .hero__social {
-    top: 38px;
-    right: 85px;
+    display: none;
   }
   .hero-homepage {
     background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/hero/desktop-hero-home.jpg);
@@ -1505,9 +1496,42 @@ address {
   padding-top: 24px;
   padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.65);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-restaurant-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .restaurant {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-restaurant-mobile@2x.jpg);
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant {
+    padding-top: 48px;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-restaurant-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (min-resolution: 192dpi), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .restaurant {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-restaurant-tablet@2x.jpg);
+  }
+}
+@media (min-width: 1280px) {
+  .restaurant {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-restaurant-descktop.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (min-resolution: 192dpi), (min-width: 1280px) and (min-resolution: 2dppx) {
+  .restaurant {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-restaurant-descktop@2x.jpg);
+  }
 }
 
-@media screen and (min-width: 1024px) {
+.rextaurant__box-text {
+  margin-bottom: 40px;
+  margin-left: 140px;
+}
+@media (min-width: 1024px) {
   .rextaurant__box-text {
     margin-left: 278px;
   }
@@ -1525,7 +1549,7 @@ address {
   margin-bottom: 12px;
   font-size: 40px;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .restaurant__title {
     margin-bottom: 16px;
     font-size: 64px;
@@ -1539,7 +1563,7 @@ address {
   letter-spacing: 0.02em;
   color: #ffffff;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .restaurant__subtitle {
     margin-bottom: 8px;
     font-size: 24px;
@@ -1547,48 +1571,68 @@ address {
 }
 
 .restaurant__text {
-  margin-bottom: 48px;
+  max-width: 249px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #bababa;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .restaurant__text {
     max-width: 610px;
     font-size: 16px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+.restaurant-slider__box {
+  padding-right: 0;
+}
+@media (min-width: 1024px) {
   .restaurant-slider__box {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-end;
+    padding-right: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  .restaurant-slider__box {
+    padding-right: 52px;
   }
 }
 
-@media screen and (min-width: 1024px) {
+.restaurant-slider__block {
+  margin-left: 40px;
+}
+@media (min-width: 1024px) {
   .restaurant-slider__block {
     margin-left: 29px;
   }
 }
 
+.restaurant-slider__item {
+  margin-bottom: 24px;
+}
+.restaurant-slider__item img {
+  border-radius: 2px;
+}
+
 .restaurant-slider__box-icon {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 32px;
 }
 @media screen and (max-width: 1023px) {
   .restaurant-slider__box-icon {
-    margin-left: 40px;
     margin-bottom: 32px;
   }
 }
 
 .restaurant-slider__button-arrow {
+  display: flex;
   color: #ffffff;
   border: none;
   cursor: pointer;
@@ -1597,7 +1641,7 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .restaurant-slider__button-arrow:hover, .restaurant-slider__button-arrow:focus {
-  color: #f3c653;
+  color: rgba(243, 198, 83, 0.7);
   transform: scale(1.05);
 }
 
@@ -1614,11 +1658,11 @@ address {
   justify-content: center;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .rextaurant__box-buttons {
     flex-direction: column;
     margin-left: 47px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
 }
 
@@ -1674,12 +1718,47 @@ address {
   padding-top: 24px;
   padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.65);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-hotel-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hotel {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-hotel-mobile@2x.jpg);
+  }
+}
+@media (min-width: 1024px) {
+  .hotel {
+    padding-top: 48px;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-hotel-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (min-resolution: 192dpi), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .hotel {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-hotel-tablet@2x.jpg);
+  }
+}
+@media (min-width: 1280px) {
+  .hotel {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-hotel-descktop.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1280px) and (min-resolution: 192dpi), (min-width: 1280px) and (min-resolution: 2dppx) {
+  .hotel {
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/home-page/bcg-details/bcg-details-hotel-descktop@2x.jpg);
+  }
+}
+@media (min-width: 1024px) {
+  .hotel {
+    padding-top: 48px;
+  }
 }
 
 .hotel__box {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-bottom: 48px;
   margin-right: 144px;
 }
 @media screen and (min-width: 1024px) {
@@ -1716,6 +1795,9 @@ address {
     font-size: 64px;
   }
 }
+.hotel__title span {
+  letter-spacing: normal;
+}
 
 .hotel__subtitle {
   margin-bottom: 20px;
@@ -1732,22 +1814,25 @@ address {
 }
 
 .hotel__text {
-  margin-bottom: 48px;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #bababa;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .hotel__text {
     max-width: 549px;
-    margin-bottom: 40px;
     font-size: 16px;
   }
 }
+@media (min-width: 1280px) {
+  .hotel__text {
+    max-width: 595px;
+  }
+}
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .hotel-slider__box {
     display: flex;
     justify-content: flex-end;
@@ -1757,6 +1842,9 @@ address {
 
 .hotel-slider__block {
   margin-right: 32px;
+}
+.hotel-slider__block ul {
+  margin-bottom: 24px;
 }
 
 .hotel-slider__box-icon {
@@ -1798,7 +1886,7 @@ address {
   justify-content: center;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .hotel__box-buttons {
     margin-right: 47px;
     flex-direction: column;
@@ -2412,7 +2500,7 @@ body.lock {
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: #fff;
+  background: #FFFDEE;
   box-shadow: 0px 0px 30px rgba(41, 48, 61, 0.15);
   transition: all 0.8s ease 0s;
   opacity: 0;
@@ -2432,6 +2520,17 @@ body.lock {
   text-align: center;
   color: #000000;
   text-transform: uppercase;
+}
+@media (min-width: 1024px) {
+  .popup__title {
+    font-size: 40px;
+    line-height: 1.15;
+  }
+}
+@media (min-width: 1024px) {
+  .popup__title__cost {
+    font-size: 32px;
+  }
 }
 .popup__close {
   position: absolute;
@@ -2480,14 +2579,21 @@ body.lock {
   height: 54px;
   padding: 17px 12px;
   width: 100%;
+  background-color: transparent;
   font-family: "Times New Roman";
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.05em;
   outline: transparent;
-  color: #808080;
+  color: rgb(128, 128, 128);
   border: 1px solid #C79002;
+}
+@media (min-width: 1024px) {
+  .user-form__area {
+    height: 64px;
+    font-size: 24px;
+  }
 }
 .user-form__lable {
   display: block;
@@ -2498,7 +2604,12 @@ body.lock {
   font-size: 14px;
   line-height: 1.21;
   letter-spacing: 0.02em;
-  color: #c79002;
+  color: #C79002;
+}
+@media (min-width: 1024px) {
+  .user-form__lable {
+    font-size: 16px;
+  }
 }
 .user-form__select {
   position: relative;
@@ -2508,14 +2619,21 @@ body.lock {
   height: 54px;
   padding: 17px 12px;
   align-items: center;
+  background-color: transparent;
   font-family: "Times New Roman";
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.05em;
-  color: #808080;
+  color: rgb(128, 128, 128);
   border: 1px solid #C79002;
   border-radius: 0;
+}
+@media (min-width: 1024px) {
+  .user-form__select {
+    height: 64px;
+    font-size: 24px;
+  }
 }
 .user-form__select::after {
   position: absolute;
@@ -2550,6 +2668,11 @@ body.lock {
   color: #000000;
   background: #f3c653;
   transform: scale(1.05);
+}
+@media (min-width: 1024px) {
+  .user-form__button {
+    font-size: 24px;
+  }
 }
 .user-form__hotel {
   display: flex;
@@ -2603,7 +2726,7 @@ body.lock {
   font-size: 24px;
   line-height: 1.1666666667;
   letter-spacing: 0.05em;
-  color: #808080;
+  color: rgb(128, 128, 128);
   margin-bottom: 28px;
   width: 100%;
   text-align: start;
@@ -2614,7 +2737,7 @@ body.lock {
   font-size: 14px;
   line-height: 1.21;
   letter-spacing: 0.02em;
-  color: #c79002;
+  color: #C79002;
   margin-bottom: 20px;
   width: 100%;
   text-align: start;
