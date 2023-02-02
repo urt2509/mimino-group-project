@@ -2,20 +2,85 @@
   padding-top: 24px;
   padding-bottom: 40px;
   background: rgba(0, 0, 0, 0.65);
+
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(../images/home-page/bcg-details/bcg-details-restaurant-mobile.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url(../images/home-page/bcg-details/bcg-details-restaurant-mobile@2x.jpg);
+  }
+
+  @include for-tablet-up {
+    padding-top: 48px;
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url(../images/home-page/bcg-details/bcg-details-restaurant-tablet.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url(../images/home-page/bcg-details/bcg-details-restaurant-tablet@2x.jpg);
+    }
+  }
+
+  @include for-desktop-up {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ),
+      url(../images/home-page/bcg-details/bcg-details-restaurant-descktop.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.65),
+          rgba(0, 0, 0, 0.65)
+        ),
+        url(../images/home-page/bcg-details/bcg-details-restaurant-descktop@2x.jpg);
+    }
+  }
 }
 
 .rextaurant__box-text {
-  @media screen and (min-width: $tabletScreen) {
+  margin-bottom: 40px;
+  margin-left: 140px;
+
+  @include for-tablet-up {
     margin-left: 278px;
   }
 }
 
 .restaurant__title {
-  @include logo-title-tablet-desktop(#ffffff);
+  @include logo-title-tablet-desktop($whiteColor);
   margin-bottom: 12px;
 
   font-size: 40px;
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     margin-bottom: 16px;
 
     font-size: 64px;
@@ -29,9 +94,9 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-  color: #ffffff;
+  color: $whiteColor;
 
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     margin-bottom: 8px;
 
     font-size: 24px;
@@ -39,16 +104,16 @@
 }
 
 .restaurant__text {
-  margin-bottom: 48px;
+  max-width: 249px;
 
   font-weight: 600;
   font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-  color: #bababa;
+  color: $paragraphHotelRestColor;
 
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     max-width: 610px;
 
     font-size: 16px;
@@ -56,33 +121,49 @@
 }
 
 .restaurant-slider__box {
-  @media screen and (min-width: $tabletScreen) {
+  padding-right: 0;
+  @include for-tablet-up {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-end;
+
+    padding-right: 50px;
+  }
+
+  @include for-desktop-up {
+    padding-right: 52px;
   }
 }
 
 .restaurant-slider__block {
-  @media screen and (min-width: $tabletScreen) {
+  margin-left: 40px;
+  @include for-tablet-up {
     margin-left: 29px;
+  }
+}
+
+.restaurant-slider__item {
+  margin-bottom: 24px;
+  & img {
+    border-radius: 2px;
   }
 }
 
 .restaurant-slider__box-icon {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: flex-start;
   gap: 32px;
 
   @media screen and (max-width: ($tabletScreen - 1px)) {
-    margin-left: 40px;
     margin-bottom: 32px;
   }
 }
 
 .restaurant-slider__button-arrow {
-  color: #ffffff;
+  display: flex;
+  color: $whiteColor;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -92,7 +173,7 @@
     transform 250ms $transitionTimeFunction;
   &:hover,
   &:focus {
-    color: #f3c653;
+    color: $accentLightYellowColor;
     transform: scale(1.05);
   }
 }
@@ -111,11 +192,11 @@
   justify-content: center;
 
   text-align: center;
-  
-  @media screen and (min-width: $tabletScreen) {
+
+  @include for-tablet-up {
     flex-direction: column;
     margin-left: 47px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
   }
 }
 
