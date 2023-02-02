@@ -12,7 +12,7 @@ function swiperSlider() {
             //коментуємо чи видаляемо якщо не потрібно
 
             let swiper = new Swiper(slider.querySelector('.swiper'), {
-                speed: 1500,
+                speed: 1000,
                 // автоплей
                 //centeredSlides: true,
                 // autoplay: {
@@ -96,9 +96,9 @@ function swiperSlider() {
             //коментуємо чи видаляемо якщо не потрібно
 
             let swiper = new Swiper(slider.querySelector('.swiper'), {
-                speed: 1500,
+                speed: 1000,
                 // автоплей
-                //centeredSlides: true,
+                // centeredSlides: true,
                 // autoplay: {
                 //     delay: 3000,
                 //     disableOnInteraction: false,
