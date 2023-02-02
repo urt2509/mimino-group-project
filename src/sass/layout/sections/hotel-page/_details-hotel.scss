@@ -43,12 +43,7 @@
     }
 }
 
-.section-rooms__title {
-    margin-top: 30px;
-    margin-left: 15px;
-}
-
-.rooms__brand-title {
+/*.rooms__brand-title {
     
     width: 124px;
     height: 28px;
@@ -61,13 +56,10 @@
     line-height: 43px;
     letter-spacing: 0.3em;
     color: #494848;
-}
+}*/
 
-.section-rooms__title{
-    width: 190px;
-    height: 23px;
-    top: 32px;
-    left: 15px;
+.rooms_title {
+    margin-top: 37px;
 }
 
 .rooms {
@@ -76,8 +68,8 @@
     &_name {
         width: 338px;
         height: 28px;
-        left: 15px;
-        top: 138px;
+        margin-top: 37px;
+        
     }
 
     &_title{
