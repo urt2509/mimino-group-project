@@ -6,6 +6,7 @@
     letter-spacing: 0.02em;
     color: #7A7A7A;
     //margin-bottom: 20px;
+    
 
     @media screen and (max-width: 1023px) {
         width: 258px;
@@ -36,15 +37,30 @@
         font-size: 16px;
         line-height: calc(20/16);
     }
-        @media screen and (min-width: $tabletScreen) {
-            margin-bottom: 8px;
-            font-size: 24px;
-        }
+    @media screen and (min-width: $tabletScreen) {
+        margin-bottom: 8px;
+        font-size: 24px;
     }
+}
 
+.section-rooms__title {
+    margin-top: 30px;
+    margin-left: 15px;
+}
 
-.section-rooms__content {
-    height: 216px;
+.rooms__brand-title {
+    
+    width: 124px;
+    height: 28px;
+   
+    margin-top: 8px;
+    margin-left: 15px;
+    font-family: 'Film P3';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 43px;
+    letter-spacing: 0.3em;
+    color: #494848;
 }
 
 .section-rooms__title{
