@@ -151,7 +151,7 @@ function swiperSlider() {
                     },
                     // when window width is >= 1024px
                     768: {
-                        slidesPerView: 1.3,
+                        slidesPerView: 3,
                         spaceBetween: 34,
                     },
                     // when window width is >= 1280px
