@@ -3,7 +3,7 @@
 
   max-width: 414px;
   width: 100%;
-  height: 740px;
+  min-height: 740px;
 
   margin-left: auto;
   margin-right: auto;
@@ -173,6 +173,8 @@
 }
 
 .hero-room {
+  padding: 0;
+
   background-image: url(../images/hero/mobile-hero-hotel.jpg);
 
   &__slider-button-box {
@@ -263,10 +265,17 @@
   }
 }
 
+.swiper-section {
+  .swiper-slide {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
 @include for-tablet-up {
   .hero {
     max-width: 1024px;
-    height: 720px;
+    min-height: 720px;
     padding-top: 181px;
     padding-bottom: 257px;
 
@@ -354,6 +363,8 @@
   }
 
   .hero-room {
+    padding: 0;
+
     background-image: url(../images/hero/tablet-hero-hotel.jpg);
 
     &__slider-button-box {
@@ -474,6 +485,8 @@
   }
 
   .hero-room {
+    padding: 0;
+
     background-image: url(../images/hero/desktop-hero-room.jpg);
 
     &__slider-button-box {
