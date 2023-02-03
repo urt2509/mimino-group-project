@@ -141,6 +141,11 @@
 
 .restaurant-slider__box {
   padding-right: 0;
+
+  // & img {
+  //   height: 270px;
+  // }
+
   @include for-tablet-up {
     display: flex;
     flex-direction: row-reverse;
