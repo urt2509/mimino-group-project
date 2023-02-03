@@ -26,6 +26,51 @@
         }
 }
 
+.section-about-hotel {
+    padding-bottom: 40px;
+
+    .swiper-wrapper {
+        height: auto;
+    }
+
+    &__box {
+        @include for-tablet-up {
+            display: flex;
+            // align-items: center;
+            justify-content: space-between;
+        }
+
+    }
+
+    .swiper-main {
+        @include for-tablet-up {
+            position: static;
+            transform: translateX(0);
+        }
+    }
+}
+
+.section-about-hotel.reverse {
+
+    .section-about-hotel__box {
+        @include for-tablet-up {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    
+    }
+
+    .section-about__container-content {
+        position: relative;
+    }
+
+    .section-about__content {
+        position: static;
+        width: auto;
+    }
+}
+
 
 .rewerse--hotel.reverse {
 
@@ -71,7 +116,9 @@
     }
 }
 
-
+.button__container {
+    margin-top: 42px;
+}
 .button-hotel {
     @include button_MinWidth_Bg ($buttons-min-width: $buttons-min-width);
     display: flex;
