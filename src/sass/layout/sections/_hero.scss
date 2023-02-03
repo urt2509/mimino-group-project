@@ -1,14 +1,9 @@
 .hero {
-  position: relative;
-
-  max-width: 414px;
+  max-width: 1024px;
   width: 100%;
-  height: 740px;
 
   margin-left: auto;
   margin-right: auto;
-  padding-top: 181px;
-  padding-bottom: 102px;
 
   text-align: center;
 
@@ -17,6 +12,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+
+  &__container {
+    position: relative;
+
+    min-height: 740px;
+    padding-top: 181px;
+    padding-bottom: 102px;
+  }
 
   &__title {
     display: inline-block;
@@ -58,6 +61,7 @@
 
   &__geolink {
     position: absolute;
+    z-index: 5;
 
     padding: 8px 5px;
     width: 210px;
@@ -104,8 +108,12 @@
   }
 
   &__buttons {
-    @include button_MinWidth_Bg($buttons-background: transparent);
+    @include button_MinWidth_Bg($buttons-background: $bg-overlay);
     min-width: 236px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     line-height: 1.25;
 
     padding: 14px 24px;
@@ -117,15 +125,38 @@
 
   &__social {
     position: absolute;
+    z-index: 5;
 
     @include for-tablet-desktop {
-      left: 47px;
       bottom: 15px;
     }
 
     @include for-tablet-down {
-      left: 15px;
       bottom: 20px;
+    }
+  }
+
+  @include for-phone-only {
+    max-width: 414px;
+  }
+
+  @include for-tablet-down {
+    min-height: 740px;
+  }
+}
+
+@include for-phone-only {
+  .hero {
+    &__title {
+      font-size: 60px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
+
+    &__tagline {
+      font-size: 26px;
     }
   }
 }
@@ -140,9 +171,7 @@
     }
   }
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include for-DPR-2x {
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/mobile-hero-home@2x.jpg);
   }
@@ -152,9 +181,7 @@
   background-image: linear-gradient($bg-overlay, $bg-overlay),
     url(../images/hero/mobile-hero-restaurant.jpg);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include for-DPR-2x {
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/mobile-hero-restaurant@2x.jpg);
   }
@@ -164,37 +191,32 @@
   background-image: linear-gradient($bg-overlay, $bg-overlay),
     url(../images/hero/mobile-hero-hotel.jpg);
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include for-DPR-2x {
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/mobile-hero-hotel@2x.jpg);
   }
 }
 
 .hero-room {
-  background-image: url(../images/hero/mobile-hero-hotel.jpg);
+  position: relative;
+  padding: 0;
+
+  background-color: $whiteColor;
 
   &__slider-button-box {
     position: absolute;
+    z-index: 5;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 309px;
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
 
-    @media screen and (max-width: 1279px) {
+    @include for-desktop-down {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
-  }
-
-  &__buttons-box {
-    position: absolute;
-    right: 73px;
-    bottom: 40px;
   }
 
   &__slider-button {
@@ -212,8 +234,18 @@
     cursor: pointer;
   }
 
+  &__buttons-box {
+    position: absolute;
+    z-index: 5;
+
+    right: 73px;
+    bottom: 40px;
+  }
+
   &__title-box {
     position: absolute;
+    z-index: 5;
+    left: 15px;
     bottom: 118px;
 
     text-align: left;
@@ -247,7 +279,10 @@
   }
 
   &__social {
+    z-index: 5;
+
     @include for-tablet-down {
+      left: 15px;
       bottom: 14px;
 
       flex-direction: column;
@@ -255,20 +290,61 @@
     }
   }
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: linear-gradient($bg-overlay, $bg-overlay),
-      url(../images/hero/mobile-hero-hotel@2x.jpg);
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 143px;
+
+    background: $headerShadow;
+  }
+}
+
+.hero-room.slider-section {
+  .swiper-slide {
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: static;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding-left: 1px;
+    padding-right: 1px;
+
+    fill: $accentYellowColor;
+
+    background-color: $bg-overlay;
+    border: none;
+
+    cursor: pointer;
+
+    &::after {
+      content: '';
+    }
   }
 }
 
 @include for-tablet-up {
   .hero {
-    max-width: 1024px;
-    height: 720px;
-    padding-top: 181px;
-    padding-bottom: 257px;
+    max-width: 1280px;
+    min-height: 720px;
+
+    &__container {
+      padding-top: 181px;
+      padding-bottom: 257px;
+      min-height: 720px;
+    }
 
     &__title {
       margin-bottom: 16px;
@@ -294,7 +370,6 @@
     }
 
     &__geolink {
-      left: 47px;
       bottom: 64px;
 
       width: 285px;
@@ -321,9 +396,7 @@
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/tablet-hero-home.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include for-DPR-2x {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url(../images/hero/tablet-hero-home@2x.jpg);
     }
@@ -333,9 +406,7 @@
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/tablet-hero-restaurant.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include for-DPR-2x {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url(../images/hero/tablet-hero-restaurant@2.jpg);
     }
@@ -345,23 +416,26 @@
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/tablet-hero-hotel.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include for-DPR-2x {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url(../images/hero/tablet-hero-hotel@2x.jpg);
     }
   }
 
   .hero-room {
-    background-image: url(../images/hero/tablet-hero-hotel.jpg);
+    max-width: 1024px;
+    padding: 0;
 
     &__slider-button-box {
-      padding-left: 47px;
-      padding-right: 47px;
+      gap: 850px;
+    }
+
+    &__buttons-box {
+      right: 47px;
     }
 
     &__title-box {
+      left: 47px;
       bottom: 102px;
     }
 
@@ -394,19 +468,20 @@
       bottom: 22px;
     }
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/hero/tablet-hero-hotel@2x.jpg);
+    &::after {
+      height: 116px;
     }
   }
 }
 
 @include for-desktop-up {
   .hero {
-    max-width: 1280px;
-    padding-top: 164px;
-    padding-bottom: 257px;
+    max-width: none;
+
+    &__container {
+      padding-top: 164px;
+      padding-bottom: 257px;
+    }
 
     &__title {
       margin-bottom: 32px;
@@ -414,10 +489,6 @@
 
     &__subtitle {
       margin-bottom: 64px;
-    }
-
-    &__geolink {
-      left: 85px;
     }
 
     &__buttons-box {
@@ -441,9 +512,7 @@
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/desktop-hero-home.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include for-DPR-2x {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url(../images/hero/desktop-hero-home@2.jpg);
     }
@@ -453,9 +522,7 @@
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/desktop-hero-restaurant.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include for-DPR-2x {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url(../images/hero/desktop-hero-restaurant@2.jpg);
     }
@@ -465,26 +532,27 @@
     background-image: linear-gradient($bg-overlay, $bg-overlay),
       url(../images/hero/desktop-hero-hotel.jpg);
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
+    @include for-DPR-2x {
       background-image: linear-gradient($bg-overlay, $bg-overlay),
         url(../images/hero/desktop-hero-hotel@2.jpg);
     }
   }
 
   .hero-room {
-    background-image: url(../images/hero/desktop-hero-room.jpg);
+    max-width: 1280px;
+    padding: 0;
 
     &__slider-button-box {
-      left: 0;
+      gap: 1030px;
       bottom: 268px;
+    }
 
-      padding-left: 85px;
-      padding-right: 85px;
+    &__buttons-box {
+      right: 85px;
     }
 
     &__title-box {
+      left: 85px;
       bottom: 48px;
     }
 
@@ -492,10 +560,8 @@
       display: none;
     }
 
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(../images/hero/desktop-hero-room@2.jpg);
+    &::after {
+      height: 147px;
     }
   }
 }
