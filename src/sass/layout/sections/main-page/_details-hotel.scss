@@ -69,6 +69,20 @@
     padding-top: 48px;
   }
 }
+.container--padding-hotel {
+  padding-left: 0;
+  padding-right: 40px;
+
+  @include for-tablet-up {
+    padding-left: 47px;
+    padding-left: 47px;
+  }
+
+  @include for-desktop-up {
+    padding-left: 52px;
+    padding-right: 85px;
+  }
+}
 
 .hotel__box {
   display: flex;
@@ -76,14 +90,15 @@
   justify-content: flex-end;
 
   margin-bottom: 48px;
-  margin-right: 144px;
+  margin-right: 100px;
 
-  @media screen and (min-width: $tabletScreen) {
-    margin-right: 278px;
+  @include for-tablet-up {
+    margin-right: 226px;
     text-align: justify;
   }
 
-  @media screen and (min-width: $desktopScreen) {
+  @include for-tablet-up {
+    margin-right: 253px;
     flex-direction: column;
     align-items: flex-end;
   }
@@ -94,10 +109,12 @@
 }
 
 .hotel__title {
-  @include logo-title-mobile(#ffffff);
   margin-bottom: 12px;
 
-  @media screen and (min-width: $tabletScreen) {
+  @include logo-title-mobile($whiteColor);
+  margin-bottom: 12px;
+
+  @include for-tablet-up {
     margin-bottom: 16px;
 
     font-size: 64px;
@@ -114,9 +131,9 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-  color: #ffffff;
+  color: $whiteColor;
 
-  @media screen and (min-width: $tabletScreen) {
+  @include for-tablet-up {
     margin-bottom: 8px;
 
     font-size: 24px;
@@ -124,12 +141,14 @@
 }
 
 .hotel__text {
+  max-width: 243px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 
-  color: #bababa;
+  color: $paragraphHotelRestColor;
 
   @include for-tablet-up {
     max-width: 549px;
@@ -151,17 +170,20 @@
 }
 
 .hotel-slider__block {
-  margin-right: 32px;
-
+  @media screen and (max-width: ($tabletScreen - 1px)) {
+    transform: scaleX(-1);
+  }
   & ul {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+  }
+  & img {
+    border-radius: 2px;
   }
 }
 
 .hotel-slider__box-icon {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: end;
   gap: 32px;
 
   @media screen and (max-width: ($tabletScreen - 1px)) {
@@ -171,7 +193,7 @@
 }
 
 .hotel-slider__button {
-  color: #ffffff;
+  color: $whiteColor;
   border: none;
   cursor: pointer;
   background: transparent;
@@ -181,7 +203,7 @@
     transform 250ms $transitionTimeFunction;
   &:hover,
   &:focus {
-    color: #f3c653;
+    color: $accentYellowColor;
     transform: scale(1.05);
   }
 }
@@ -202,9 +224,9 @@
   text-align: center;
 
   @include for-tablet-up {
-    margin-right: 47px;
+    margin-left: 29px;
+    margin-bottom: 48px;
     flex-direction: column;
-    transform: translateY(-60px);
   }
 }
 

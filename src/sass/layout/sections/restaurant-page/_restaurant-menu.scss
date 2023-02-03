@@ -92,27 +92,41 @@ body {
     }
 
     &__title {
+        width: 222px;
         margin-bottom: 4px;
         font-weight: 500;
         font-size: 14px;
         line-height: 1.21;
+        @media (min-width: $tabletScreen) {
+         width: 230px;   
+        }
         @media (min-width: $desktopScreen) {
+        // width: auto;
         font-size: 16px;
         line-height: 1.25;
         }
+    }
+    &__title--drinks {
+        margin-bottom: 0;
     }
     &__ingredients {
         width: 220px;
         margin-top: 0;
         font-size: 10px;
         line-height: 1.2;
+        @media (min-width: $tabletScreen) {
+        width: 230px;   
+        }
         @media (min-width: $desktopScreen) {
-         width: 257px;
+         width: 262px;
         }
     }
-    // &:not(:last-child) {
-    //     margin-bottom: 8px;
-    // }
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    @media (min-width: $desktopScreen) {
+        margin-bottom: 12px;
+    }
+    }
 }
 
 .menu-title {
@@ -132,7 +146,13 @@ body {
     }
     &:not(:first-child) {
         margin-top: 16px;
-}
+    }
+    @media (min-width: $tabletScreen) {
+        margin-bottom: 20px;
+        &:not(:first-child) {     
+        margin-top: 20px;
+        }
+    }
 }
 .menu-table-title--salads {
     @media (max-width: ($tabletScreen - 1px)) {
