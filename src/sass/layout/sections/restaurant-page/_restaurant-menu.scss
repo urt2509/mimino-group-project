@@ -10,30 +10,11 @@ body {
 }
 
 .section {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 32px;
+
     @media (min-width: $tabletScreen) {
     padding-top: 58px;
     margin-top: 0;
-    }
-
-    @media screen and (min-width: $mobileScreen) {
-        max-width: $mobileScreen;
-    }
-
-    @media screen and (min-width: $tabletScreen) {
-        max-width: $tabletScreen;
-        padding-left: 47px;
-        padding-right: 47px;
-    }
-
-    @media screen and (min-width: $desktopScreen) {
-        max-width: $desktopScreen;
-        padding-left: 85px;
-        padding-right: 85px;
     }
 }
 
@@ -72,6 +53,7 @@ body {
     }
 
     &__weight {
+        width: 70px;
         font-weight: 300;
         font-size: 14px;
         line-height: 1.21;
@@ -101,13 +83,28 @@ body {
          width: 230px;   
         }
         @media (min-width: $desktopScreen) {
-        // width: auto;
         font-size: 16px;
         line-height: 1.25;
         }
     }
     &__title--drinks {
         margin-bottom: 0;
+        @media (min-width: $tabletScreen) {
+                width: 230px;
+            }
+        
+            @media (min-width: $desktopScreen) {
+                width: 262px;
+            }
+    }
+    &__title--desserts {
+    @media (min-width: $tabletScreen) {
+        width: 230px;
+        }
+    
+    @media (min-width: $desktopScreen) {
+        width: 262px;
+        }
     }
     &__ingredients {
         width: 220px;
