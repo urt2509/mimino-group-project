@@ -1,5 +1,3 @@
-// main slider
-// normal
 .swiper-main {
     margin: 0;
 
@@ -34,8 +32,6 @@
         }
     }
 
-
-
     &__img {
         // box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
         border-radius: 2px;
@@ -50,6 +46,20 @@
         &:hover,
         &:focus {
             fill: $accentYellowColor;
+        }
+    }
+
+    .swiper-slide {
+        @include for-tablet-down {
+            opacity: 100%;
+            transition: opacity 1000ms $transitionTimeFunction;
+        }
+    }
+
+    .swiper-slide-next {
+        @include for-tablet-down {
+            opacity: 60%;
+            // transition: opacity $transitionMsFunction $transitionTimeFunction;
         }
     }
 }
@@ -84,18 +94,8 @@
     }
 }
 
-
-.swiper-slide-next {
-    @include for-tablet-down {
-        opacity: 60%;
-        transition: opacity $transitionMsFunction $transitionTimeFunction;
-    }
-}
-
 // reverse
 .reverse {
-
-    
     .swiper-main {
         left: 0;
         margin: 0 !important;
@@ -130,10 +130,9 @@
         }
     }
 
-    .is-play {
+    .swiper-slide-active {
         @include for-tablet-down {
             opacity: 60%;
-            transition: opacity $transitionMsFunction $transitionTimeFunction;
         }
     }
 }
