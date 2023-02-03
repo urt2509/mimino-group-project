@@ -16,5 +16,11 @@
     fill: $accentLightYellowColor;
 
     background-color: transparent;
+    transition: fill 250ms $transitionTimeFunction;
+
+    &:hover,
+    &:focus {
+      fill: $brownContactColor;
+    }
   }
 }
