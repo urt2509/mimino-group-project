@@ -116,7 +116,7 @@ function swiperSlider() {
           },
           // when window width is >= 1200px
           1280: {
-            slidesPerView: 3,
+            slidesPerView: 'auto',
             spaceBetween: 86,
           }
         }
