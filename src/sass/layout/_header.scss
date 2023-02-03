@@ -90,18 +90,18 @@
     color: $accentYellowColor;
     display: block;
     padding: 16px 0;
-    transition: color 250ms linear;
+
+    transition: color 250ms $transitionTimeFunction;
 
     &:hover,
     &:focus {
       color: $brownContactColor;
     }
-
-    @include for-tablet-up {
-      padding: 24px 0;
-      font-size: 20px;
-      line-height: 1.2;
-    }
+  }
+  @include for-tablet-up {
+    padding: 24px 0;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   &__nav-contact {
@@ -138,10 +138,13 @@
   &__icon {
     display: none;
     fill: $accentYellowColor;
+    transition: fill 250ms $transitionTimeFunction;
+
     &:hover,
     &:focus {
       fill: $brownContactColor;
     }
+
     @include for-phone-up {
       display: flex;
     }
