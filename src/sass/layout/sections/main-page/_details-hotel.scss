@@ -162,10 +162,6 @@
 }
 
 .hotel-slider__box {
-  // & img {
-  //   height: 270px;
-  // }
-
   @include for-tablet-up {
     display: flex;
     justify-content: flex-end;
@@ -174,7 +170,7 @@
 }
 
 .hotel-slider__block {
-  @media screen and (max-width: ($tabletScreen - 1px)) {
+  @include for-tablet-down {
     transform: scaleX(-1);
   }
   & ul {
@@ -195,7 +191,7 @@
     &.swiper-slide-next {
       width: 20%;
 
-      @media screen and (max-width: 1024px) {
+      @include for-tablet-down {
         opacity: 0.6;
       }
     }
@@ -207,7 +203,7 @@
   flex-wrap: nowrap;
   gap: 32px;
 
-  @media screen and (max-width: ($tabletScreen - 1px)) {
+  @include for-tablet-down {
     margin-right: 43px;
     margin-bottom: 32px;
   }

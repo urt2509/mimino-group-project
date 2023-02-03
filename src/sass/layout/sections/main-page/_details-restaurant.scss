@@ -142,10 +142,6 @@
 .restaurant-slider__box {
   padding-right: 0;
 
-  // & img {
-  //   height: 270px;
-  // }
-
   @include for-tablet-up {
     display: flex;
     flex-direction: row-reverse;
@@ -173,7 +169,7 @@
     &.swiper-slide-next {
       width: 20%;
 
-      @media screen and (max-width: 1024px) {
+      @include for-tablet-down {
         opacity: 0.6;
       }
     }
@@ -203,7 +199,7 @@
   justify-content: flex-start;
   gap: 32px;
 
-  @media screen and (max-width: ($tabletScreen - 1px)) {
+  @include for-tablet-down {
     margin-bottom: 32px;
   }
 }
