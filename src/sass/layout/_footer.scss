@@ -3,6 +3,7 @@
 
     &__logo {
         @include logo-title-mobile(#F3C653);
+
     }
 
     &__link {
@@ -15,13 +16,33 @@
         color: $accentYellowColor;
     }
 
-    &__icon {
+    &__item {
         fill: $accentLightYellowColor;
+
+        @include for-tablet-up {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 11px;
+            padding: 10px 12px;
+            border: 0.5px solid $accentYellowColor;
+        }
     }
 
     &__nav {
-        display: flex;
-        justify-content: space-around;
+
+        @include for-tablet-up {
+            display: block;
+        }
+    }
+
+    &__box {
+
+        @include for-tablet-up {
+            display: flex;
+            justify-content: space-between;
+            min-width: 393px;
+        }
     }
 
     &__network {
@@ -29,28 +50,57 @@
         flex-direction: row;
         gap: 20px;
 
+        @include for-tablet-up {
+            flex-direction: column-reverse;
+        }
     }
 
     &__list {
+        margin-bottom: 16px;
 
-        @media screen and(max-width: ($tabletScreen - 1px)) {
-            &:not(:last-child) {
-                margin-bottom: 16px;
-            }
+        &:last-child {
+            margin-bottom: 33px;
+        }
 
-            &:last-child {
-                margin-bottom: 33px;
-            }
+        @include for-tablet-up {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__text {
+        display: none;
+
+        @include for-tablet-up {
+            display: inline-flex;
+            line-height: 1.25;
+            color: $accentYellowColor;
+        }
+    }
+
+    &__icon {
+
+        @include for-tablet-up {
+            display: flex;
+            align-items: baseline;
         }
     }
 }
 
 .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
 
-    @media screen and(min-width: $tabletScreen) {
-        padding-top: 80px;
-        padding-bottom: 80px;
+    @include for-tablet-up {
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        flex-wrap: wrap;
+        height: 100%;
+        align-items: center;
     }
 }
