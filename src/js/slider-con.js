@@ -72,8 +72,8 @@ function swiperSlider() {
 
       let swiper = new Swiper(slider.querySelector('.swiper'), {
         speed: 1000,
-        slidesPerView: 2, // кількість слайдерів для показу
-        spaceBetween: 40, // відстань між слайдерами
+        slidesPerView: 1.3, // кількість слайдерів для показу
+        spaceBetween: 20, // відстань між слайдерами
         slidesPerGroup: 1,
         loop: true,
         loopFillGroupWithBlank: true,
@@ -105,19 +105,19 @@ function swiperSlider() {
         // адаптив
         breakpoints: {
           // when window width is >= 320px
-          320: {
-            slidesPerView: 2,
-            spaceBetween: 25,
+          414: {
+            slidesPerView: 1.3,
+            spaceBetween: 20,
           },
           // when window width is >= 768px
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 40,
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 34,
           },
           // when window width is >= 1200px
-          1200: {
-            slidesPerView: 2,
-            spaceBetween: 40,
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 86,
           }
         }
       });

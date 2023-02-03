@@ -162,6 +162,10 @@
 }
 
 .hotel-slider__box {
+  // & img {
+  //   height: 270px;
+  // }
+
   @include for-tablet-up {
     display: flex;
     justify-content: flex-end;
