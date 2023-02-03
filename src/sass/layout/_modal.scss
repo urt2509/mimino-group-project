@@ -61,7 +61,8 @@ body.lock {
     // max-width: 414px;
     width: 100%;
     overflow-x: hidden;
-    background: #fff;
+    overflow-y: hidden;
+    background: $bcgContactColor;
     box-shadow: 0px 0px 30px rgba(41, 48, 61, 0.15);
 
     transition: all 0.8s ease 0s;
@@ -76,8 +77,17 @@ body.lock {
     line-height: 1.17;
     letter-spacing: 0.05em;
     text-align: center;
-    color: #000000;
+    color: $blackColor;
     text-transform: uppercase;
+    @include for-tablet-up {
+      font-size: 40px;
+      line-height: 1.15;
+    }
+    &__cost {
+      @include for-tablet-up {
+        font-size: 32px;
+      }
+    }
   }
 
   &__close {
@@ -87,29 +97,37 @@ body.lock {
     width: 24px;
     height: 24px;
     padding: 0;
-    fill: #000000;
+    fill: $blackColor;
     border: none;
     background: transparent;
+
+    transition: fill $transitionMsFunction $transitionTimeFunction;
+
+    &:hover,
+    &:focus {
+      fill: $accentYellowColor;
+    }
   }
 }
 
 .user-form {
-  // min-height: 668px;
+
   display: flex;
 
   flex-direction: column;
-  // justify-content: space-between;
-  // max-width: 414px;
+
   width: 100%;
   @include for-tablet-up {
     flex-direction: row;
     flex-wrap: wrap;
     margin: -8px;
+    justify-content: center;
   }
-  // width: 100%;
+
 
   &__thumb-rest {
     margin-bottom: 20px;
+ 
     &:last-of-type {
       margin-bottom: 40px;
     }
@@ -125,6 +143,7 @@ body.lock {
     height: 54px;
     padding: 17px 12px;
     width: 100%;
+    background-color: transparent;
     font-family: 'Times New Roman';
 
     font-weight: 700;
@@ -133,13 +152,17 @@ body.lock {
     letter-spacing: 0.05em;
     outline: transparent;
 
-    color: #808080;
+    color: $placeHolderColor;
     border: 1px solid $brownContactColor;
+
+    @include for-tablet-up {
+      height: 64px;
+      font-size: 24px;
+    }
   }
 
   &__lable {
     display: block;
-    // margin-bottom: 20px;
     margin-left: 12px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -147,40 +170,38 @@ body.lock {
     font-size: 14px;
     line-height: 1.21;
     letter-spacing: 0.02em;
-    //  &:last-of-type {
-    //   margin-bottom: 40px;
-    //  }
-
-    /* Brown */
-
-    color: #c79002;
+    color: $brownContactColor;
+    @include for-tablet-up {
+      font-size: 16px;
+    }
   }
-  // &__lable:last-child {
-  //   margin-bottom: 40px;
-  // }
-  // &__thumb {
-  //   position: relative;
-
-  // }
 
   &__select {
     position: relative;
     margin-bottom: 8px;
     display: flex;
     width: 100%;
-    // min-height: 54px;
+    height: 54px;
+  
     padding: 17px 12px;
     align-items: center;
-    font-family: 'Times New Roman';
+    background-color: transparent;
 
+    font-family: 'Times New Roman';
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     letter-spacing: 0.05em;
 
-    color: #808080;
+    @include for-tablet-up {
+      height: 64px;
+      font-size: 24px;
+    }
+
+    color: $placeHolderColor;
 
     border: 1px solid $brownContactColor;
+    border-radius: 0;
 
     &::after {
       position: absolute;
@@ -191,8 +212,7 @@ body.lock {
       top: 50%;
       right: 15px;
       margin-top: -5px;
-      // margin-top: -10px;
-      // margin-right: 15px;
+ 
     }
 
     &:hover,
@@ -203,29 +223,15 @@ body.lock {
   }
 
   &__button {
-    display: block;
-
-    padding: 20px 0px;
-    max-width: 384px;
-    width: 100%;
-
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
+    @include button_MinWidth_BorderR(100%, #000000);
+    height: 64px;
     font-size: 20px;
     line-height: 1.15;
     text-transform: uppercase;
 
-    /* White */
-
-    color: #ffffff;
-    /* Black */
-
-    background: #000000;
-    /* Akzent yellow */
-
-    border: 1px solid #f3c653;
-    border-radius: 2px;
+    @include for-tablet-up {
+      font-size: 24px;
+    }
   }
 
   &__hotel {
@@ -235,20 +241,17 @@ body.lock {
       align-items: flex-end;
     }
     // @include for-tablet-up {
-    
+
     // }
   }
+
   &__thumb-hotel {
-    
     margin-bottom: 20px;
     @include for-tablet-up {
-     & + & {
-      gap: 16px;
-     }
-
+      & + & {
+        gap: 16px;
+      }
       width: 288px;
-     
-     
     }
   }
   &__box {
@@ -258,8 +261,59 @@ body.lock {
 
     @include for-tablet-up {
       display: flex;
+      gap: 16px;
       justify-content: space-between;
-  
     }
   }
+
+  &__cost-hotel {
+    width: 100%;
+  }
+
+  &__thumb {
+    margin-bottom: 40px;
+    width: 100%;
+    display: inline-block;
+
+    &.night {
+      margin-right: 16px;
+    }
+
+    @include for-tablet-up {
+      width: calc(50% - 16px);
+    }
+  }
+
+  &__subtitle {
+    font-family: 'Times New Roman';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.05em;
+
+    color: $placeHolderColor;
+    margin-bottom: 28px;
+    width: 100%;
+    text-align: start;
+  }
+
+  &__lable-cost {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: 0.02em;
+    color: $brownContactColor;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: start;
+  }
+}
+
+.nice-select-dropdown {
+  width: 100%;
+}
+
+.nice-select.open .list {
+  max-height: 170px;
 }

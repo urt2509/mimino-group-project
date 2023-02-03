@@ -12,6 +12,11 @@
             padding-bottom: 40px;
 
             flex-direction: row;
+            gap: 101px;
+        }
+
+        @include for-desktop-up {
+            padding-bottom: 74px;
             gap: 108px;
         }
     }
@@ -23,7 +28,11 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding-bottom: 2px;
+            padding-bottom: 4px;
+        }
+
+        @include for-desktop-up {
+            padding-bottom: 1px;
         }
     }
 
@@ -41,9 +50,17 @@
 
         @include for-tablet-up {
             width: 297px;
-            margin-bottom: 54px;
+            margin-bottom: 52px;
+        }
+
+        @include for-desktop-up {
+            width: 368px;
+            margin-bottom: 40px;    
+            font-size: 20px;
+            line-height: calc(24 / 20);
         }
     }
+
     &-holder {
         display: flex;
         flex-direction: column;
@@ -55,19 +72,21 @@
             margin-bottom: 48px;
         }
     }
+
     &-item {
         display: flex;
-        gap: 30px;
+        gap: 22px;
 
         @include for-tablet-up {
             flex-direction: column;
             gap: 8px;
         }
     }
+
     &-name {
         display: flex;
         align-items: center;
-        min-width: 100px;
+        min-width: 102px;
         
         font-style: normal;
         font-weight: 500;
@@ -81,12 +100,19 @@
     &-details {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
+        gap: 11px;
+        padding-left: 8px;
+        padding-right: 8px;
         height: 40px;
         width: 260px;
         background-color: $whiteColor;
         border: 0.5px solid $accentYellowColor;
         border-radius: 4px;
+
+        @include for-desktop-up {
+            gap: 15px;
+            width: 264px;
+        }
     }
 }
 
@@ -99,9 +125,13 @@
     @include logo-title-mobile($linkContactMobileColor);
     margin-bottom: 12px;
 
-    @include for-phone-up {
+    @include for-tablet-up {
         @include logo-title-tablet-desktop ($linkContactMobileColor);
         margin-bottom: 8px;
+    }
+
+    @include for-desktop-up {
+        margin-bottom: 16px;
     }
 }
 
@@ -118,9 +148,13 @@
 
     color: $linkContactMobileColor;
 
+    @include for-desktop-up {
+        color: $linkContactColor;
+    }
+
     &-icon {
         margin-right: 8px;
-        margin-left: 8px;
+        // margin-left: 8px;
         fill: $brownContactColor;
     }
 }
@@ -139,7 +173,7 @@
         padding-bottom: 8px;
     
         display: flex;
-        width: 254px;
+        width: 260px;
         align-items: center;
     
     
@@ -170,6 +204,10 @@
 
         @include for-tablet-up {
             max-width: 233px;
+        }
+
+        @include for-desktop-up {
+            color: $linkContactColor;
         }
     }
 }

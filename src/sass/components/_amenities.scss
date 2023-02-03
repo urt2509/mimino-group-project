@@ -3,11 +3,11 @@
 	padding-bottom: 32px;
 	background: $bcgContactColor;
 
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up{
 		padding-top: 50px;
 		padding-bottom: 40px;
 }
-	@media screen and (min-width: $desktopScreen) {
+	@include for-desktop-up {
 			padding-top: 48px;
 			padding-bottom: 48px;
 	}
@@ -30,13 +30,13 @@
 		letter-spacing: 0.02em;
 		color: $titleContactColor;
 
-		@media screen and (min-width: $tabletScreen) {
+		@include for-tablet-up {
 			max-width: 757px;
-			flex-basis: calc((100% - 1 * 80px) / 2);
+			// flex-basis: calc((100% - 1 * 80px) / 2);
 		}
 
-		@media screen and (min-width: $desktopScreen) {
-			flex-basis: calc((100% - 1 * 159px) / 2);
+		@include for-desktop-up {
+			// flex-basis: calc((100% - 1 * 159px) / 2);
 	}
 	}
 
@@ -58,11 +58,11 @@
 }
 
 .amenities-room__conteiner {
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up {
 			display: flex;
 			gap: 80px;
 		}
-		@media screen and (min-width: $desktopScreen) {
+		@include for-desktop-up {
 			gap: 159px;
 	}
 }
@@ -84,12 +84,12 @@
 		margin-bottom: 0;
 	}
 
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up {
 		margin-bottom: 0;
 		flex-basis: calc((100% - 1 * 80px) / 2);
 	}
 
-	@media screen and (min-width: $desktopScreen) {
+	@include for-desktop-up {
 		flex-basis: calc((100% - 1 * 159px) / 2);
 }
 }
@@ -100,41 +100,24 @@
 	align-items: center;
 	justify-content: center;
 
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up {
 		flex-direction: column;
 		align-items: flex-end;
 	}
 }
 
 .amenities__btn {
+
+	@include button_MinWidth_BorderR (384px, $buttons-background);
 	margin-bottom: 20px;
 	padding: 20px 43px;
-	min-width: 384px;
 	height: 64px;
-	background: $buttons-background;
-	color: $whiteColor;
-	border: 1px solid $accentYellowColor;
+
 	border-radius: 25px;
 	font-style: normal;
-	font-weight: 500;
 	font-size: 20px;
-	line-height: 1.2;
 
-	transform: scale(1);
-  transition: color 250ms $transitionTimeFunction,
-    background 250ms $transitionTimeFunction,
-    transform 250ms $transitionTimeFunction;
-
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    color: #000000;
-    background: #f3c653;
-    transform: scale(1.05);
-  }
-
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up {
 		width: 434px;
 		padding: 18px 38px;
 	}
@@ -151,7 +134,7 @@
 
 	color: $brownContactColor;
 
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up {
 		font-size: 20px;
 		line-height: 1.2;
 	}
@@ -166,7 +149,7 @@
 	margin-left: 12px;
 	fill: currentColor;
 
-	@media screen and (min-width: $tabletScreen) {
+	@include for-tablet-up {
 		margin-left: 16px;
 	}
 }
