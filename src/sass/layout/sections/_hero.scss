@@ -201,6 +201,8 @@
   position: relative;
   padding: 0;
 
+  max-width: 414px;
+
   background-color: $whiteColor;
 
   &__slider-button-box {
@@ -219,20 +221,20 @@
     }
   }
 
-  &__slider-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
+  // &__slider-button {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   width: 40px;
+  //   height: 40px;
 
-    fill: $accentYellowColor;
+  //   fill: $accentYellowColor;
 
-    background-color: $bg-overlay;
-    border: none;
+  //   background-color: $bg-overlay;
+  //   border: none;
 
-    cursor: pointer;
-  }
+  //   cursor: pointer;
+  // }
 
   &__buttons-box {
     position: absolute;
@@ -305,13 +307,13 @@
 }
 
 .hero-room.slider-section {
-  .swiper-slide {
-    min-width: 100%;
-    min-height: 100%;
-  }
+  // .swiper-slide {
+  //   min-width: 100%;
+  //   min-height: 100%;
+  // }
 
-  .swiper-button-next,
-  .swiper-button-prev {
+  .swiper-button-prev,
+  .swiper-button-next {
     position: static;
 
     display: flex;
