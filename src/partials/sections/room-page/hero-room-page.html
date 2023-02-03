@@ -1,51 +1,89 @@
 <section class="hero hero-room slider-section" data-slider="hero-slider">
-  <!-- <div class="container"> -->
   <div class="swiper">
     <ul class="swiper-wrapper">
       <li class="swiper-slide">
-        <img
-          srcset="
-            ./images/room-page/deluxe-double-room-bedroom-414.jpg   414w,
-            ./images/room-page/deluxe-double-room-bedroom-828.jpg   828w,
-            ./images/room-page/deluxe-double-room-bedroom-1024.jpg 1024w,
-            ./images/room-page/deluxe-double-room-bedroom-1280.jpg 1280w,
-            ./images/room-page/deluxe-double-room-bedroom-2048.jpg 2048w,
-            ./images/room-page/deluxe-double-room-bedroom-2560.jpg 2560w
-          "
-          sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 414px) 414px, 100vw"
-          src="./images/room-page/deluxe-double-room-bedroom-414.jpg"
-          alt="Спальня в двокімнатному люксі"
-        />
+        <picture>
+          <source
+            srcset="
+              ./images/room-page/deluxe-double-room-bedroom-1280.jpg 1x,
+              ./images/room-page/deluxe-double-room-bedroom-2560.jpg 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/jpeg"
+          />
+          <source
+            srcset="
+              ./images/room-page/deluxe-double-room-bedroom-1024.jpg 1x,
+              ./images/room-page/deluxe-double-room-bedroom-2048.jpg 2x
+            "
+            media="(min-width: 1024px)"
+            type="image/jpeg"
+          />
+          <img
+            srcset="
+              ./images/room-page/deluxe-double-room-bedroom-414.jpg 1x,
+              ./images/room-page/deluxe-double-room-bedroom-828.jpg 2x
+            "
+            src="./images/room-page/deluxe-double-room-bedroom-414.jpg"
+            alt="Спальня в двокімнатному люксі"
+          />
+        </picture>
       </li>
       <li class="swiper-slide">
-        <img
-          srcset="
-            ./images/room-page/deluxe-double-room-living-space-414.jpg   414w,
-            ./images/room-page/deluxe-double-room-living-space-828.jpg   828w,
-            ./images/room-page/deluxe-double-room-living-space-1024.jpg 1024w,
-            ./images/room-page/deluxe-double-room-living-space-1280.jpg 1280w,
-            ./images/room-page/deluxe-double-room-living-space-2048.jpg 2048w,
-            ./images/room-page/deluxe-double-room-living-space-2560.jpg 2560w
-          "
-          sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 414px) 414px, 100vw"
-          src="./images/room-page/deluxe-double-room-living-space-414.jpg"
-          alt="Житлова площа в двокімнатному люксі"
-        />
+        <picture>
+          <source
+            srcset="
+              ./images/room-page/deluxe-double-room-living-space-1280.jpg 1x,
+              ./images/room-page/deluxe-double-room-living-space-2560.jpg 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/jpeg"
+          />
+          <source
+            srcset="
+              ./images/room-page/deluxe-double-room-living-space-1024.jpg 1x,
+              ./images/room-page/deluxe-double-room-living-space-2048.jpg 2x
+            "
+            media="(min-width: 1024px)"
+            type="image/jpeg"
+          />
+          <img
+            srcset="
+              ./images/room-page/deluxe-double-room-living-space-414.jpg 1x,
+              ./images/room-page/deluxe-double-room-living-space-828.jpg 2x
+            "
+            src="./images/room-page/deluxe-double-room-living-space-414.jpg"
+            alt="Житлова площа в двокімнатному люксі"
+          />
+        </picture>
       </li>
       <li class="swiper-slide">
-        <img
-          srcset="
-            ./images/room-page/deluxe-double-room-bathroom-414.jpg   414w,
-            ./images/room-page/deluxe-double-room-bathroom-828.jpg   828w,
-            ./images/room-page/deluxe-double-room-bathroom-1024.jpg 1024w,
-            ./images/room-page/deluxe-double-room-bathroom-1280.jpg 1280w,
-            ./images/room-page/deluxe-double-room-bathroom-2048.jpg 2048w,
-            ./images/room-page/deluxe-double-room-bathroom-2560.jpg 2560w
-          "
-          sizes="(min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 414px) 414px, 100vw"
-          src="./images/room-page/deluxe-double-room-bathroom-414.jpg"
-          alt="Ванна кімната в двокімнатному люксі"
-        />
+        <picture>
+          <source
+            srcset="
+              ./images/room-page/deluxe-double-room-bathroom-1280.jpg 1x,
+              ./images/room-page/deluxe-double-room-bathroom-2560.jpg 2x
+            "
+            media="(min-width: 1280px)"
+            type="image/jpeg"
+          />
+          <source
+            srcset="
+              ./images/room-page/deluxe-double-room-bathroom-1024.jpg 1x,
+              ./images/room-page/deluxe-double-room-bathroom-2048.jpg 2x
+            "
+            media="(min-width: 1024px)"
+            type="image/jpeg"
+          />
+          <img
+            srcset="
+              ./images/room-page/deluxe-double-room-bathroom-414.jpg 1x,
+              ./images/room-page/deluxe-double-room-bathroom-828.jpg 2x
+            "
+            src="./images/room-page/deluxe-double-room-bathroom-414.jpg"
+            alt="Ванна кімната в двокімнатному люксі"
+          />
+        </picture>
       </li>
     </ul>
   </div>
@@ -62,12 +100,12 @@
     Україна, м. Полтава, <br />вул. Маршала Бірюзова, 15</a
   >
   <div class="hero-room__slider-button-box">
-    <button type="button" class="hero-room__slider-button swiper-button-prev">
+    <button type="button" class="swiper-button-prev">
       <svg width="40" height="40">
         <use href="./images/icon.svg#icon-left-arrow"></use>
       </svg>
     </button>
-    <button type="button" class="hero-room__slider-button swiper-button-next">
+    <button type="button" class="swiper-button-next">
       <svg width="40" height="40">
         <use href="./images/icon.svg#icon-right-arrow"></use>
       </svg>
@@ -85,7 +123,7 @@
     </p>
   </div>
 
-  <div class="hero__buttons-box hero-room__buttons-box">
+  <div class="hero-room__buttons-box">
     <button
       type="button"
       class="hero__buttons popup-link"
@@ -133,5 +171,4 @@
       </a>
     </li>
   </ul>
-  <!-- </div> -->
 </section>
