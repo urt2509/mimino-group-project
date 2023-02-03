@@ -17,7 +17,6 @@
     margin-left: 0;
     margin-right: auto;
     transition: color 250ms linear;
-    
 
     @include for-phone-up {
       margin-right: 52px;
@@ -116,12 +115,6 @@
     line-height: 1.214;
     letter-spacing: 0.02em;
     color: $whiteColor;
-    transition: color 250ms linear;
-
-    &:hover,
-    &:focus {
-      color: $brownContactColor;
-    }
   }
 
   &__nav-contact--padding {
@@ -144,8 +137,11 @@
 
   &__icon {
     display: none;
-    fill: currentColor;
-
+    fill: $accentYellowColor;
+    &:hover,
+    &:focus {
+      fill: $brownContactColor;
+    }
     @include for-phone-up {
       display: flex;
     }
@@ -154,16 +150,6 @@
   &__phone {
     @include for-phone-up {
       display: flex;
-    }
-  }
-
-  &__social-icon {
-    color: $accentYellowColor;
-    transition: color 250ms linear;
-
-    &:hover,
-    &:focus {
-      color: $brownContactColor;
     }
   }
 }
