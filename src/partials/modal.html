@@ -27,27 +27,28 @@
         <div class="user-form__thumb-rest">
           <input
             type="text"
-            name="user-name"
-            id="user-name"
+            name="client-name-rest"
+            id="user-name-rest"
             class="user-form__area"
             placeholder="Ваше ім’я"
           />
-          <label for="user-name" class="user-form__lable"
+          <label for="user-name-rest" class="user-form__lable"
             >На кого забронювати столик?</label
           >
         </div>
 
         <div class="user-form__thumb-rest">
           <input
-            name="user-tel"
+            name="client-tel-rest"
+            id="user-tel-rest"
             type="text"
             class="user-form__area js-inputmask"
           />
-          <label for="user-tel" class="user-form__lable">Номер телефону</label>
+          <label for="user-tel-rest" class="user-form__lable">Номер телефону</label>
         </div>
 
         <div class="user-form__thumb-rest">
-          <select name="number-of-visitors" class="user-form__select js-select">
+          <select name="visitors" id="number-of-visitors" class="user-form__select js-select">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -63,12 +64,12 @@
         </div>
 
         <div class="user-form__thumb-rest">
-          <select name="date" class="user-form__select js-select">
+          <select name="date" id="date-restaurant" class="user-form__select js-select">
             <option value="today">Сьогодні</option>
             <option value="tomorrow">Завтра</option>
             <option value="after-tomorrow">Післязавтра</option>
           </select>
-          <label for="date" class="user-form__lable"
+          <label for="date-restaurant" class="user-form__lable"
             >На яку дату бронювати?</label
           >
         </div>
@@ -95,24 +96,25 @@
           <div class="user-form__thumb-hotel">
             <input
               type="text"
-              name="user-name"
-              id="user-name"
+              name="client-name-hotel"
+              id="user-name-hotel"
               class="user-form__area"
               placeholder="Ваше ім’я"
             />
-            <label for="user-name" class="user-form__lable">Ім'я</label>
+            <label for="user-name-hotel" class="user-form__lable">Ім'я</label>
           </div>
           <div class="user-form__thumb-hotel">
             <input
-              name="user-tel"
+              name="client-tel-hotel"
+              id="user-tel-hotel"
               type="text"
               class="user-form__area js-inputmask"
             />
-            <label for="user-tel" class="user-form__lable">Телефон</label>
+            <label for="user-tel-hotel" class="user-form__lable">Телефон</label>
           </div>
         </div>
         <div class="user-form__thumb-hotel">
-          <select name="room-class" class="user-form__select js-select">
+          <select name="room" id="room-class" class="user-form__select js-select">
             <option value="2xlux" selected>Двомісний люкс</option>
             <option value="3x">Трьохмісний номер</option>
             <option value="2x">Двохмісний номер</option>
@@ -123,12 +125,12 @@
         </div>
         <div class="user-form__box">
           <div class="user-form__thumb-hotel">
-            <select name="arrival date" class="user-form__select js-select">
+            <select name="clients-arrival-date" id="arrival-date" class="user-form__select js-select">
               <option value="today">Сьогодні</option>
               <option value="tomorrow">Завтра</option>
               <option value="after-tomorrow">Післязавтра</option>
             </select>
-            <label for="arrival date" class="user-form__lable"
+            <label for="arrival-date" class="user-form__lable"
               >Дата заїзду</label
             >
           </div>
@@ -136,6 +138,7 @@
           <div class="user-form__thumb-hotel">
             <select
               name="date-of-departure"
+              id="date-of-departure"
               class="user-form__select js-select"
             >
               <option value="today">Сьогодні</option>
@@ -169,7 +172,8 @@
       <form class="user-form__cost-hotel">
         <div class="user-form__thumb night">
           <select
-            name="number-of-night"
+            name="nights"
+            id="number-of-night-hotel-1"
             class="user-form__select js-select"
             style="opacity: 0; width: 0px; padding: 0px; height: 0px"
           >
@@ -182,20 +186,20 @@
             <option value="7">7</option>
             <option value="8">8</option>
           </select>
-          <label for="number-of-night" class="user-form__lable"
+          <label for="number-of-night-hotel-1" class="user-form__lable"
             >Кількість ночей</label
           >
         </div>
         <div class="user-form__thumb hotel-cost">
           <input
             type="text"
-            name="cost"
-            id="cost"
+            name="price"
+            id="cost-hotel-1"
             class="user-form__area"
             placeholder="1000"
             readonly
           />
-          <label for="cost" class="user-form__lable">грн</label>
+          <label for="cost-hotel-1" class="user-form__lable">грн</label>
         </div>
         <button type="submit" class="user-form__button">
           Забронювати номер
@@ -219,7 +223,8 @@
       <form class="user-form__cost-hotel">
         <div class="user-form__thumb night">
           <select
-            name="number-of-night"
+            name="nights"
+            id="number-of-night-hotel-2"
             class="user-form__select js-select"
             style="opacity: 0; width: 0px; padding: 0px; height: 0px"
           >
@@ -232,20 +237,20 @@
             <option value="7">7</option>
             <option value="8">8</option>
           </select>
-          <label for="number-of-night" class="user-form__lable"
+          <label for="number-of-night-hotel-2" class="user-form__lable"
             >Кількість ночей</label
           >
         </div>
         <div class="user-form__thumb hotel-cost">
           <input
             type="text"
-            name="cost"
-            id="cost"
+            name="price"
+            id="cost-hotel-2"
             class="user-form__area"
             placeholder="2000"
             readonly
           />
-          <label for="cost" class="user-form__lable">грн</label>
+          <label for="cost-hotel-2" class="user-form__lable">грн</label>
         </div>
         <button type="submit" class="user-form__button">
           Забронювати номер
@@ -269,7 +274,8 @@
       <form class="user-form__cost-hotel">
         <div class="user-form__thumb night">
           <select
-            name="number-of-night"
+            name="nights"
+            id="number-of-night-hotel-3"
             class="user-form__select js-select"
             style="opacity: 0; width: 0px; padding: 0px; height: 0px"
           >
@@ -282,20 +288,20 @@
             <option value="7">7</option>
             <option value="8">8</option>
           </select>
-          <label for="number-of-night" class="user-form__lable"
+          <label for="number-of-night-hotel-3" class="user-form__lable"
             >Кількість ночей</label
           >
         </div>
         <div class="user-form__thumb hotel-cost">
           <input
             type="text"
-            name="cost"
-            id="cost"
+            name="price"
+            id="cost-hotel-3"
             class="user-form__area"
             placeholder="3000"
             readonly
           />
-          <label for="cost" class="user-form__lable">грн</label>
+          <label for="cost-hotel-3" class="user-form__lable">грн</label>
         </div>
         <button type="submit" class="user-form__button">
           Забронювати номер
