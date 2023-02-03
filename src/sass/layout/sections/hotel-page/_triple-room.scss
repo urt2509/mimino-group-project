@@ -1,3 +1,7 @@
+.section-about-hotel--triple {
+    background-color: #F0ECD6;
+}
+
 .section-hotel__title {
     font-family: 'Times New Roman';
     margin-bottom: 16px;
@@ -7,6 +11,10 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #000000;
+
+    &--lowercase {
+        text-transform: lowercase;
+    }
 }
 
 .section-hotel__brand-title {
