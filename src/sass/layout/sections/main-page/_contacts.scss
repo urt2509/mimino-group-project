@@ -109,6 +109,10 @@
         border: 0.5px solid $accentYellowColor;
         border-radius: 4px;
 
+        @include for-phone-only {
+            gap: 7px;
+        }
+
         @include for-desktop-up {
             gap: 15px;
             width: 264px;
@@ -148,14 +152,21 @@
 
     color: $linkContactMobileColor;
 
+    @include for-phone-only {
+        font-size: 8px;
+    }
+
     @include for-desktop-up {
         color: $linkContactColor;
     }
 
     &-icon {
         margin-right: 8px;
-        // margin-left: 8px;
         fill: $brownContactColor;
+
+        @include for-phone-only {
+            margin-right: 3px;
+        }
     }
 }
 

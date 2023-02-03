@@ -66,12 +66,31 @@
   }
 }
 
-.rextaurant__box-text {
-  margin-bottom: 40px;
-  margin-left: 140px;
+.container__padding {
+  padding-left: 40px;
+  padding-right: 0;
 
   @include for-tablet-up {
-    margin-left: 278px;
+    padding-left: 47px;
+    padding-right: 50px;
+  }
+
+  @include for-desktop-up {
+    padding-left: 85px;
+    padding-right: 52px;
+  }
+}
+
+.rextaurant__box-text {
+  margin-bottom: 40px;
+  margin-left: 100px;
+
+  @include for-tablet-up {
+    margin-left: 226px;
+  }
+
+  @include for-desktop-up {
+    margin-left: 253px;
   }
 }
 
@@ -122,22 +141,32 @@
 
 .restaurant-slider__box {
   padding-right: 0;
+
+  // & img {
+  //   height: 270px;
+  // }
+
   @include for-tablet-up {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: flex-end;
-
-    padding-right: 50px;
   }
 
   @include for-desktop-up {
     padding-right: 52px;
   }
+
+  & img {
+    border-radius: 2px;
+  }
+
+  & > .swiper {
+    margin-left: 29px;
+  }
 }
 
 .restaurant-slider__block {
-  margin-left: 40px;
   @include for-tablet-up {
     margin-left: 29px;
   }
@@ -195,7 +224,7 @@
 
   @include for-tablet-up {
     flex-direction: column;
-    margin-left: 47px;
+
     margin-bottom: 56px;
   }
 }
