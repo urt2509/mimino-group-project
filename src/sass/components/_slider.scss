@@ -2,7 +2,7 @@
     margin: 0;
 
     @include for-tablet-down {
-        flex-basis: 540px;
+        flex-basis: 530px;
         flex-shrink: 0;
         transform: translateX(30px);
     }
@@ -33,9 +33,8 @@
     }
 
     &__img {
-        // box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
         border-radius: 2px;
-        // // overflow: visible;
     }
 
     &__arrow {
@@ -51,6 +50,7 @@
 
     .swiper-slide {
         @include for-tablet-down {
+            background-color: #DADADA;
             opacity: 100%;
             transition: opacity 1000ms $transitionTimeFunction;
         }
