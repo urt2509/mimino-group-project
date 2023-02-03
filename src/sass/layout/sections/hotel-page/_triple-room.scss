@@ -1,0 +1,94 @@
+.section-hotel__title {
+    font-family: 'Times New Roman';
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.13;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.section-hotel__brand-title {
+    position: relative;
+    width: 100%;
+    margin-bottom: 32px;
+   
+        @media screen and (min-width: $tabletScreen) {
+            margin-bottom: 62px;
+        }
+        
+}
+
+.section-about__box-swiper {
+    @include for-tablet-down {
+            flex-direction: row;
+        }
+}
+
+
+.rewerse--hotel.reverse {
+
+    .swiper-main {
+        margin: 0;
+
+        @include for-tablet-down {
+            transform: translateX(30px);
+        }
+    }
+
+    .swiper-btns {
+        justify-content: flex-end;
+
+        @include for-phone-only {
+            width: 100%;
+        }
+
+        @include for-phone-up {
+            width: 300px;
+        }
+
+        @include for-tablet-up {
+            width: 100%;
+        }
+
+        @include for-tablet-up {
+            justify-content: flex-start !important;
+        }
+    }
+
+    .swiper-slide-next {
+        @include for-tablet-down {
+            opacity: 100%;
+        }
+    }
+
+    .is-play {
+        @include for-tablet-down {
+            opacity: 60%;
+            transition: opacity $transitionMsFunction $transitionTimeFunction;
+        }
+    }
+}
+
+
+.button-hotel {
+    @include button_MinWidth_Bg ($buttons-min-width: $buttons-min-width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    &--link {
+        max-width: 236px;
+        margin-bottom: 16px;
+    }
+
+    &--btn {
+        margin-bottom: 4px;
+    }
+}
+
+
