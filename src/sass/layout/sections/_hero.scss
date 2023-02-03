@@ -1,5 +1,5 @@
 .hero {
-  max-width: 414px;
+  max-width: 1024px;
   width: 100%;
 
   margin-left: auto;
@@ -110,6 +110,10 @@
   &__buttons {
     @include button_MinWidth_Bg($buttons-background: $bg-overlay);
     min-width: 236px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     line-height: 1.25;
 
     padding: 14px 24px;
@@ -124,18 +128,36 @@
     z-index: 5;
 
     @include for-tablet-desktop {
-      // left: 47px;
       bottom: 15px;
     }
 
     @include for-tablet-down {
-      // left: 15px;
       bottom: 20px;
     }
   }
 
+  @include for-phone-only {
+    max-width: 414px;
+  }
+
   @include for-tablet-down {
     min-height: 740px;
+  }
+}
+
+@include for-phone-only {
+  .hero {
+    &__title {
+      font-size: 60px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+    }
+
+    &__tagline {
+      font-size: 26px;
+    }
   }
 }
 
@@ -267,6 +289,19 @@
       gap: 8px;
     }
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 143px;
+
+    background: $headerShadow;
+  }
 }
 
 .hero-room.slider-section {
@@ -335,7 +370,6 @@
     }
 
     &__geolink {
-      // left: 47px;
       bottom: 64px;
 
       width: 285px;
@@ -433,6 +467,10 @@
       left: 47px;
       bottom: 22px;
     }
+
+    &::after {
+      height: 116px;
+    }
   }
 }
 
@@ -505,7 +543,6 @@
     padding: 0;
 
     &__slider-button-box {
-      // left: 85px;
       gap: 1030px;
       bottom: 268px;
     }
@@ -521,6 +558,10 @@
 
     &__geolink {
       display: none;
+    }
+
+    &::after {
+      height: 147px;
     }
   }
 }

@@ -1067,7 +1067,7 @@ address {
 }
 
 .hero {
-  max-width: 414px;
+  max-width: 1024px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -1170,6 +1170,9 @@ address {
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   min-width: 236px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   line-height: 1.25;
   padding: 14px 24px;
 }
@@ -1197,12 +1200,28 @@ address {
     bottom: 20px;
   }
 }
+@media (max-width: 413px) {
+  .hero {
+    max-width: 414px;
+  }
+}
 @media (max-width: 1023px) {
   .hero {
     min-height: 740px;
   }
 }
 
+@media (max-width: 413px) {
+  .hero__title {
+    font-size: 60px;
+  }
+  .hero__subtitle {
+    font-size: 14px;
+  }
+  .hero__tagline {
+    font-size: 26px;
+  }
+}
 .hero-homepage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(../images/hero/mobile-hero-home.jpg);
 }
@@ -1310,6 +1329,16 @@ address {
     flex-direction: column;
     gap: 8px;
   }
+}
+.hero-room::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 143px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 54.17%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hero-room.slider-section .swiper-slide {
@@ -1450,6 +1479,11 @@ address {
     bottom: 22px;
   }
 }
+@media (min-width: 1024px) {
+  .hero-room::after {
+    height: 116px;
+  }
+}
 @media (min-width: 1280px) {
   .hero {
     max-width: none;
@@ -1523,6 +1557,9 @@ address {
   }
   .hero-room__geolink {
     display: none;
+  }
+  .hero-room::after {
+    height: 147px;
   }
 }
 .restaurant {
