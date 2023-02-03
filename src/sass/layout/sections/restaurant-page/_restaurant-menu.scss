@@ -1,62 +1,40 @@
-body {
+.section {
     background-color: $bgcSectionAboutColor;
+    color: $arrowsSectionAboutColor;
+    @include for-tablet-up {
+    background-color: #F0ECD6;
+    }
     margin: 0;
     font-weight: 400;
-    color: var(--primary-text-color);
     letter-spacing: 0.02em;
-    @media (min-width: $tabletScreen) {
-    background-color: #F0ECD6; 
-    }
-}
+    padding-top: 32px;
 
-.section {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 32px;
-    @media (min-width: $tabletScreen) {
+    @include for-tablet-up {
     padding-top: 58px;
     margin-top: 0;
-    }
-
-    @media screen and (min-width: $mobileScreen) {
-        max-width: $mobileScreen;
-    }
-
-    @media screen and (min-width: $tabletScreen) {
-        max-width: $tabletScreen;
-        padding-left: 47px;
-        padding-right: 47px;
-    }
-
-    @media screen and (min-width: $desktopScreen) {
-        max-width: $desktopScreen;
-        padding-left: 85px;
-        padding-right: 85px;
     }
 }
 
 .section__button {
     display: flex;
     justify-content: center;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-@media (min-width: $tabletScreen) and (max-width: ($desktopScreen - 1px)) {
+@include for-tablet-desktop {
     .section__button {
-        justify-content: end;
+        justify-content: right;
         margin-right: 47px;
-        margin-top: 41px;
-        margin-bottom: 40px;
+        padding-top: 41px;
+        padding-bottom: 40px
     }
 }
-@media (min-width: $desktopScreen) {
+@include for-desktop-up {
     .section__button {
-        justify-content: end;
+        justify-content: right;
         margin-right: 85px;
-        margin-top: 32px;
-        margin-bottom: 60px;
+        padding-top: 32px;
+        padding-bottom: 60px;
     }
 }
 
@@ -72,10 +50,11 @@ body {
     }
 
     &__weight {
+        width: 70px;
         font-weight: 300;
         font-size: 14px;
         line-height: 1.21;
-        @media (min-width: $desktopScreen) {
+        @include for-desktop-up {
         font-size: 16px;
         line-height: 1.25;
         }
@@ -85,7 +64,7 @@ body {
         font-weight: 700;
         font-size: 14px;
         line-height: 1.21;
-        @media (min-width: $desktopScreen) {
+        @include for-desktop-up {
         font-size: 16px;
         line-height: 1.25;
         }
@@ -97,33 +76,48 @@ body {
         font-weight: 500;
         font-size: 14px;
         line-height: 1.21;
-        @media (min-width: $tabletScreen) {
-         width: 230px;   
+        @include for-tablet-up {
+        width: 230px;   
         }
-        @media (min-width: $desktopScreen) {
-        // width: auto;
+        @include for-desktop-up {
         font-size: 16px;
         line-height: 1.25;
         }
     }
     &__title--drinks {
         margin-bottom: 0;
+        @include for-tablet-up {
+        width: 230px;
+        }
+        
+        @include for-desktop-up {
+        width: 262px;
+        }
+    }
+    &__title--desserts {
+        @include for-tablet-up {
+        width: 230px;
+        }
+    
+        @include for-desktop-up {
+        width: 262px;
+        }
     }
     &__ingredients {
         width: 220px;
         margin-top: 0;
         font-size: 10px;
         line-height: 1.2;
-        @media (min-width: $tabletScreen) {
+        @include for-tablet-up {
         width: 230px;   
         }
-        @media (min-width: $desktopScreen) {
+        @include for-desktop-up {
          width: 262px;
         }
     }
     &:not(:last-child) {
         margin-bottom: 8px;
-    @media (min-width: $desktopScreen) {
+        @include for-desktop-up {
         margin-bottom: 12px;
     }
     }
@@ -140,14 +134,14 @@ body {
     margin-bottom: 16px;
     font-size: 20px;
     line-height: 1.15;
-    @media (min-width: $desktopScreen) {
+    @include for-desktop-up {
     font-size: 24px;
     line-height: 1.16;
     }
     &:not(:first-child) {
         margin-top: 16px;
     }
-    @media (min-width: $tabletScreen) {
+        @include for-tablet-up {
         margin-bottom: 20px;
         &:not(:first-child) {     
         margin-top: 20px;
@@ -155,33 +149,33 @@ body {
     }
 }
 .menu-table-title--salads {
-    @media (max-width: ($tabletScreen - 1px)) {
+    @include for-tablet-down {
     margin-top: 16px;  
     }
 }
 
-@media (min-width: $tabletScreen) {
+@include for-tablet-up {
     .menu {
         display: flex;
         flex-wrap: wrap;
     }
 }
 
-@media (min-width: $tabletScreen) and (max-width: ($desktopScreen - 1px)) {
+@include for-tablet-desktop {
     .menu__item {
         flex-basis: calc((100% - 88px) / 2);
         margin-right: 88px;
     }
 }
 
-@media (min-width: $desktopScreen) {
+@include for-desktop-up {
     .menu__item {
         flex-basis: calc((100% - 140px) / 2);
         margin-right: 140px;
     }
 }
 
-@media (min-width: $tabletScreen) {
+@include for-tablet-up {
     .menu__item:nth-last-child(2n+1) {
         margin-right: 0;
     }
