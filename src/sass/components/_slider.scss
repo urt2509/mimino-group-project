@@ -2,7 +2,7 @@
     margin: 0;
 
     @include for-tablet-down {
-        flex-basis: 530px;
+        flex-basis: 516px;
         flex-shrink: 0;
         transform: translateX(30px);
     }
